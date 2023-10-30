@@ -3,8 +3,8 @@ import "styled-components";
 declare module "styled-components" {
   export interface DefaultTheme {
     color: {
-      main: string;
-      secondary: string;
+      "container-background": "#fbd000";
+      "main-background": "#049cd8";
       "error-background": string;
       "check-background": string;
       font: string;
@@ -12,8 +12,9 @@ declare module "styled-components" {
     };
 
     typography: {
-      "main-font-fammily": string;
+      "main-font-family": string;
       "secondary-font-family": string;
+      size: string;
     };
   }
 }
