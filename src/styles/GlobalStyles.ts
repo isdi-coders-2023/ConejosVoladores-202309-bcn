@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+  @import url("https://fonts.cdnfonts.com/css/new-super-mario-font-u");
+  
   *,
   ::after,
   ::before {
