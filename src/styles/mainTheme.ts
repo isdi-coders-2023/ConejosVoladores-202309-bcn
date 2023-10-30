@@ -10,10 +10,11 @@ const mainTheme: DefaultTheme = {
     "secondary-font": "#fff",
     "input-background": "#fff",
   },
+
   typography: {
     "main-font-family": "Verdana, Geneva, Tahoma, sans-serif",
     "secondary-font-family": "'New Super Mario Font U', sans-serif",
-    "property-size": "1,1875rem",
+    "properties-size": "1,1875rem",
     "title-size": "2.5rem",
     "header-size": "1.875rem",
     "input-text-size": "1.125rem",

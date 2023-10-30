@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.typography["main-font-family"]};
     color: ${({ theme }) => theme.color["main-font"]};
     background-color: ${({ theme }) => theme.color["main-background"]};
-    font-size: ${({ theme }) => theme.typography["property-size"]};
+    font-size: ${({ theme }) => theme.typography["properties-size"]};
   }
 
 `;

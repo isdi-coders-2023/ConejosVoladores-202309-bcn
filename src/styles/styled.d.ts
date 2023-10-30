@@ -15,7 +15,7 @@ declare module "styled-components" {
     typography: {
       "main-font-family": string;
       "secondary-font-family": string;
-      "property-size": string;
+      "properties-size": string;
       "title-size": string;
       "header-size": string;
       "input-title-size": string;
