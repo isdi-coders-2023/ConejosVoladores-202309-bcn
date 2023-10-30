@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   @import url("https://fonts.cdnfonts.com/css/new-super-mario-font-u");
-  
+
   *,
   ::after,
   ::before {
@@ -30,11 +30,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${({ theme }) => theme.typography["main-font-family"]};
-    color: ${({ theme }) => theme.color.font};
+    color: ${({ theme }) => theme.color["main-font"]};
     background-color: ${({ theme }) => theme.color["main-background"]};
-    font-size: ${({ theme }) => theme.typography.size};
+    font-size: ${({ theme }) => theme.typography["property-size"]};
   }
-
 
 `;
 
