@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import MainHeader from "../Header.tsx/MainHeader";
+import MainHeader from "../MainHeader/MainHeader";
 
 const App = (): React.ReactElement => {
   return (
