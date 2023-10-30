@@ -13,4 +13,3 @@ const App = (): React.ReactElement => {
 };
 
 export default App;
-<main className="main-content"></main>;
