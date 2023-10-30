@@ -1,5 +1,4 @@
 import { createContext } from "react";
-import "../types";
 import { CharacterStructure } from "../types";
 
 interface CharactersContextStructure {
