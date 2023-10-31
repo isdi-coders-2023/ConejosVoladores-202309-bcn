@@ -2,13 +2,11 @@ import { Route, Routes } from "react-router-dom";
 
 const App = (): React.ReactElement => {
   return (
-    <>
-      <main className="main-content>">
-        <Routes>
-          <Route path="/home" />
-        </Routes>
-      </main>
-    </>
+    <main className="main-content>">
+      <Routes>
+        <Route path="/home" />
+      </Routes>
+    </main>
   );
 };
 
