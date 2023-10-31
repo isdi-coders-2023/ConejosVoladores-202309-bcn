@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import "@fontsource/press-start-2p";
 
-const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.cdnfonts.com/css/new-super-mario-font-u");
-
+const GlobalStyles = createGlobalStyle`
   *,
   ::after,
   ::before {
@@ -29,12 +28,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: ${({ theme }) => theme.typography["main-font-family"]};
-    color: ${({ theme }) => theme.color["main-font"]};
-    background-color: ${({ theme }) => theme.color["main-background"]};
-    font-size: ${({ theme }) => theme.typography["properties-size"]};
+    font-family: ${({ theme }) => theme.typography["mainFontFamily"]};
+    color: ${({ theme }) => theme.color["mainFont"]};
+    background-color: ${({ theme }) => theme.color["mainBackground"]};
+    font-size: ${({ theme }) => theme.typography["propertiesSize"]};
   }
 
 `;
 
-export default GlobalStyle;
+export default GlobalStyles;
