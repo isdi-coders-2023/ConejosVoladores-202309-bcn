@@ -1,4 +1,11 @@
+import HomePageStyled from "./HomePageStyled";
+
 const HomePage = (): React.ReactElement => {
-  return <h2>Characters</h2>;
+  return (
+    <HomePageStyled>
+      <h2>Characters</h2>
+    </HomePageStyled>
+  );
 };
+
 export default HomePage;
