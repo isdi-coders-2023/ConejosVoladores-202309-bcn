@@ -1,5 +1,7 @@
+import { ThemeProvider } from "styled-components";
 import HomePage from "./HomePage";
 import { screen, render } from "@testing-library/react";
+import mainTheme from "../../styles/mainTheme";
 
 describe("Given a HomePage component", () => {
   describe("When it is call", () => {
@@ -7,7 +9,11 @@ describe("Given a HomePage component", () => {
 
     const expectedText = "Characters";
 
-    render(<HomePage />);
+    render(
+      <ThemeProvider theme={mainTheme}>
+        <HomePage />
+      </ThemeProvider>,
+    );
 
     const text = screen.getByText(expectedText);
 
