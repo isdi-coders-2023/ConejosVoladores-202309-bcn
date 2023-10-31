@@ -10,7 +10,6 @@ const mainTheme: DefaultTheme = {
     secondaryFont: "#fff",
     inputBackground: "#fff",
   },
-
   typography: {
     mainFontFamily: "Verdana, Geneva, Tahoma, sans-serif",
     secondaryFontFamily: "'New Super Mario Font U', sans-serif",
