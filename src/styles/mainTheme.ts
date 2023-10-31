@@ -12,7 +12,7 @@ const mainTheme: DefaultTheme = {
   },
   typography: {
     mainFontFamily: "Verdana, Geneva, Tahoma, sans-serif",
-    secondaryFontFamily: "'New Super Mario Font U', sans-serif",
+    secondaryFontFamily: "'Press Start 2P', sans-serif",
     propertiesSize: "1,1875rem",
     titleSize: "2.5rem",
     headerSize: "1.875rem",
