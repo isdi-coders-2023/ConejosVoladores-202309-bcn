@@ -1,18 +1,20 @@
-import MainHeaderStyled from "./MainHeaderStyled";
+import HeaderStyled from "./HeaderStyled";
 
-const MainHeader = (): React.ReactElement => {
+const Header = (): React.ReactElement => {
   return (
-    <MainHeaderStyled>
+    <HeaderStyled>
       <div className="header">
         <img
           src="/favicon.webp"
           alt="Super Smash Bross logo"
           className="header__logo"
+          width="48"
+          height="48"
         />
         <span className="header__title">Mario Smashers</span>
       </div>
-    </MainHeaderStyled>
+    </HeaderStyled>
   );
 };
 
-export default MainHeader;
+export default Header;

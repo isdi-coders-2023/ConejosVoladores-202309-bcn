@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MainHeaderStyled = styled.header`
+const HeaderStyled = styled.header`
   .header {
     width: 100vw;
     height: 88px;
@@ -24,4 +24,5 @@ const MainHeaderStyled = styled.header`
     }
   }
 `;
-export default MainHeaderStyled;
+
+export default HeaderStyled;
