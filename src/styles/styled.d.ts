@@ -3,25 +3,24 @@ import "styled-components";
 declare module "styled-components" {
   export interface DefaultTheme {
     color: {
-      "container-background": string;
-      "main-background": string;
-      "error-background": string;
-      "successfull-background": string;
-      "main-font": string;
-      "secondary-font": string;
-      "input-background": string;
+      containerBackground: string;
+      mainBackground: string;
+      errorBackground: string;
+      successfullBackground: string;
+      mainFont: string;
+      secondaryFont: string;
+      inputBackground: string;
     };
-
     typography: {
-      "main-font-family": string;
-      "secondary-font-family": string;
-      "properties-size": string;
-      "title-size": string;
-      "header-size": string;
-      "input-title-size": string;
-      "input-text-size": string;
-      "title-size": string;
-      "header-size": string;
+      mainFontFamily: string;
+      secondaryFontFamily: string;
+      propertiesSize: string;
+      titleSize: string;
+      headerSize: string;
+      inputTitleSize: string;
+      inputTextSize: string;
+      titleSize: string;
+      headerSize: string;
     };
   }
 }

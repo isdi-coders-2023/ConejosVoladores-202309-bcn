@@ -10,7 +10,7 @@ const MainHeaderStyled = styled.header`
     align-items: center;
     gap: 35px;
     flex-shrink: 0;
-    background-color: ${({ theme }) => theme.color["container-background"]};
+    background-color: ${({ theme }) => theme.color["containerBackground"]};
 
     &__logo {
       width: 48px;
@@ -19,8 +19,8 @@ const MainHeaderStyled = styled.header`
 
     &__title {
       text-align: center;
-      font-family: ${({ theme }) => theme.typography["secondary-font-family"]};
-      font-size: ${({ theme }) => theme.typography["header-size"]};
+      font-family: ${({ theme }) => theme.typography["secondaryFontFamily"]};
+      font-size: ${({ theme }) => theme.typography["headerSize"]};
     }
   }
 `;
