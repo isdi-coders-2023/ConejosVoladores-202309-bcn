@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import "@fontsource/press-start-2p";
 
 const GlobalStyles = createGlobalStyle`
-  @import url("https://fonts.cdnfonts.com/css/new-super-mario-font-u");
-
   *,
   ::after,
   ::before {
