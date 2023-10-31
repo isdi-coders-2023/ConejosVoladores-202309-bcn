@@ -1,14 +1,15 @@
 import { useContext } from "react";
 import CharactersContext from "../../features/characters/strore/CharactersContext";
+import CharacterListSyled from "./CharacterListStyle";
 
 const CharacterList = (): React.ReactElement => {
   const { characters } = useContext(CharactersContext);
   return (
-    <ul>
+    <CharacterListSyled>
       {characters.map((character) => {
         return <li key={character.id}></li>;
       })}
-    </ul>
+    </CharacterListSyled>
   );
 };
 export default CharacterList;
