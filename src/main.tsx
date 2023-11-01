@@ -6,17 +6,17 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "./styles/mainTheme";
 import GlobalStyles from "./styles/GlobalStyles";
 import "@fontsource/press-start-2p";
-import CharacarterProviderWapper from "./features/characters/Store/CharactersWapper";
+import CharacarterProviderWrapper from "./features/characters/Store/CharactersWrapper";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <CharacarterProviderWapper>
+    <CharacarterProviderWrapper>
       <ThemeProvider theme={mainTheme}>
         <BrowserRouter>
           <GlobalStyles />
           <App />
         </BrowserRouter>
       </ThemeProvider>
-    </CharacarterProviderWapper>
+    </CharacarterProviderWrapper>
   </React.StrictMode>,
 );

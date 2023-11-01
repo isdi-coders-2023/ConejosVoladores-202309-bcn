@@ -2,16 +2,19 @@ import { ThemeProvider } from "styled-components";
 import HomePage from "./HomePage";
 import { screen, render } from "@testing-library/react";
 import mainTheme from "../../styles/mainTheme";
+import CharacarterProviderWrapper from "../../features/characters/Store/CharactersWrapper";
 
 describe("Given a HomePage component", () => {
-  describe("When it is call", () => {
-    test("Then it should show heading with text Character", () => {
+  describe("When it is called", () => {
+    test("Then it should show a heading with the text Characters", () => {
       const expectedText = "Characters";
 
       render(
-        <ThemeProvider theme={mainTheme}>
-          <HomePage />
-        </ThemeProvider>,
+        <CharacarterProviderWrapper>
+          <ThemeProvider theme={mainTheme}>
+            <HomePage />
+          </ThemeProvider>
+        </CharacarterProviderWrapper>,
       );
 
       const text = screen.getByText(expectedText);

@@ -1,9 +1,9 @@
 export interface CharacterStructure {
   id: number;
   name: string;
-  Availability: string;
-  Appears: string;
-  Attack: string;
-  Smashtype: string;
-  ImageUrl: string;
+  availability: string;
+  appears: string[];
+  attack: string;
+  smashtype: string;
+  imageUrl: string;
 }
