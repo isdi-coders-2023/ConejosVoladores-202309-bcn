@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@fontsource/press-start-2p": "^5.0.17",
-    "@vitest/coverage-v8": "^0.34.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0"
