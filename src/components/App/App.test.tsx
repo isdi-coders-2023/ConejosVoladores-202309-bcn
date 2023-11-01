@@ -3,7 +3,7 @@ import CharacarterProviderWapper from "../../features/characters/strore/Characte
 import mainTheme from "../../styles/mainTheme";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyles from "../../styles/GlobalStyles";
+import GlobalStyle from "../../styles/GlobalStyle";
 import App from "./App";
 
 describe("Given component App", () => {
@@ -13,7 +13,7 @@ describe("Given component App", () => {
         <CharacarterProviderWapper>
           <ThemeProvider theme={mainTheme}>
             <BrowserRouter>
-              <GlobalStyles />
+              <GlobalStyle />
               <App />
             </BrowserRouter>
           </ThemeProvider>
