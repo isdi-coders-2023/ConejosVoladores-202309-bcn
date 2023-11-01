@@ -4,25 +4,32 @@ import { BrowserRouter } from "react-router-dom";
 import GlobalStyles from "../../styles/GlobalStyles";
 import mainTheme from "../../styles/mainTheme";
 import CharacterList from "./CharacterList";
-import { render, screen } from "@testing-library/react";
-beforeEach(() => {
-  render(
-    <CharacarterProviderWapper>
-      <ThemeProvider theme={mainTheme}>
-        <BrowserRouter>
-          <GlobalStyles />
-          <CharacterList />
-        </BrowserRouter>
-      </ThemeProvider>
-    </CharacarterProviderWapper>,
-  );
-});
+import { cleanup, render, screen } from "@testing-library/react";
+
 describe("Given the component CharacterList", () => {
   describe("When CharacterList is initialize", () => {
-    test("It should have strated the list", async () => {
-      const CharacterList = await screen.findByRole("list");
+    beforeEach(() => {
+      render(
+        <CharacarterProviderWapper>
+          <ThemeProvider theme={mainTheme}>
+            <BrowserRouter>
+              <GlobalStyles />
+              <CharacterList />
+            </BrowserRouter>
+          </ThemeProvider>
+        </CharacarterProviderWapper>,
+      );
+    });
+    test("It should have strated the list", () => {
+      const elementList = screen.queryByRole("list");
+      const elementItemList = screen.queryByRole("listitem");
 
-      expect(CharacterList).toBeInTheDocument();
+      expect(elementList).toBeInTheDocument();
+      expect(elementItemList).toBeNull();
     });
   });
+});
+
+afterEach(() => {
+  cleanup();
 });
