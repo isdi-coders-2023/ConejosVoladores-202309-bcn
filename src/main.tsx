@@ -5,17 +5,17 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "./styles/mainTheme";
 import GlobalStyles from "./styles/GlobalStyles";
-import CharacterProviderWapper from "./features/characters/strore/CharactersWapper";
+import CharacterProviderWrapper from "./features/characters/strore/CharactersWrapper";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <CharacterProviderWapper>
+    <CharacterProviderWrapper>
       <ThemeProvider theme={mainTheme}>
         <BrowserRouter>
           <GlobalStyles />
           <App />
         </BrowserRouter>
       </ThemeProvider>
-    </CharacterProviderWapper>
+    </CharacterProviderWrapper>
   </React.StrictMode>,
 );
