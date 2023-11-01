@@ -3,19 +3,19 @@ import mainTheme from "../../styles/mainTheme";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import CharacarterProviderWrapper from "../../features/characters/store/CharactersWrapper";
+import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given component App", () => {
   describe("When is initialize", () => {
     beforeAll(() => {
       render(
-        <CharacarterProviderWrapper>
+        <CharacarterWrapper>
           <ThemeProvider theme={mainTheme}>
             <BrowserRouter>
               <App />
             </BrowserRouter>
           </ThemeProvider>
-        </CharacarterProviderWrapper>,
+        </CharacarterWrapper>,
       );
     });
     test("It should have a HTMLElement main", () => {
