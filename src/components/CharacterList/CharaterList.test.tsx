@@ -1,8 +1,8 @@
 import { ThemeProvider } from "styled-components";
-import CharacarterProviderWapper from "../../features/characters/strore/CharactersWapper";
 import mainTheme from "../../styles/mainTheme";
 import CharacterList from "./CharacterList";
 import { render, screen } from "@testing-library/react";
+import CharacarterProviderWapper from "../../features/characters/Store/CharactersWapper";
 
 describe("Given the component CharacterList", () => {
   describe("When CharacterList is initialize", () => {
