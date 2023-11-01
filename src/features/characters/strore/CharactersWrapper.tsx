@@ -1,8 +1,8 @@
 import { useMemo, useCallback, useState, PropsWithChildren } from "react";
-import CharactersContext from "./CharactersContext";
 import { CharacterStructure } from "../types";
+import CharactersContext from "./CharacterContext";
 
-const CharacterProviderWapper = ({ children }: PropsWithChildren) => {
+const CharacterProviderWrapper = ({ children }: PropsWithChildren) => {
   const [characters, setCharacters] = useState<CharacterStructure[]>([]);
   const loadCharacters = useCallback((characters: CharacterStructure[]) => {
     setCharacters(characters);
@@ -20,4 +20,4 @@ const CharacterProviderWapper = ({ children }: PropsWithChildren) => {
   );
 };
 
-export default CharacterProviderWapper;
+export default CharacterProviderWrapper;
