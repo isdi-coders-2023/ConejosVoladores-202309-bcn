@@ -9,7 +9,7 @@ const HeaderStyled = styled.header`
     align-items: center;
     gap: 35px;
     flex-shrink: 0;
-    background-color: ${({ theme }) => theme.color["containerBackground"]};
+    background-color: ${({ theme }) => theme.color.containerBackground};
 
     &--color {
     }
@@ -21,8 +21,8 @@ const HeaderStyled = styled.header`
 
     &__title {
       text-align: center;
-      font-family: ${({ theme }) => theme.typography["secondaryFontFamily"]};
-      font-size: ${({ theme }) => theme.typography["headerSize"]};
+      font-family: ${({ theme }) => theme.typography.secondaryFontFamily};
+      font-size: ${({ theme }) => theme.typography.headerSize};
     }
   }
 `;
