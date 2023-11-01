@@ -1,8 +1,8 @@
 import { ThemeProvider } from "styled-components";
-import CharacarterProviderWapper from "../../features/characters/strore/CharactersWapper";
 import mainTheme from "../../styles/mainTheme";
 import CharacterList from "./CharacterList";
 import { render, screen } from "@testing-library/react";
+import CharacarterProviderWrapper from "../../features/characters/Store/CharactersWrapper";
 
 describe("Given the component CharacterList", () => {
   describe("When CharacterList is initialize", () => {
@@ -11,11 +11,11 @@ describe("Given the component CharacterList", () => {
       const liTagName = "listitem";
 
       render(
-        <CharacarterProviderWapper>
+        <CharacarterProviderWrapper>
           <ThemeProvider theme={mainTheme}>
             <CharacterList />
           </ThemeProvider>
-        </CharacarterProviderWapper>,
+        </CharacarterProviderWrapper>,
       );
 
       const elementList = screen.queryByRole(ulTagName);

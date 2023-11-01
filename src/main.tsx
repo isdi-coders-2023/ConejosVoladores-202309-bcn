@@ -5,17 +5,18 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "./styles/mainTheme";
 import GlobalStyles from "./styles/GlobalStyles";
-import CharacarterProviderWapper from "./features/characters/strore/CharactersWapper";
+import "@fontsource/press-start-2p";
+import CharacarterProviderWrapper from "./features/characters/Store/CharactersWrapper";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <CharacarterProviderWapper>
+    <CharacarterProviderWrapper>
       <ThemeProvider theme={mainTheme}>
         <BrowserRouter>
           <GlobalStyles />
           <App />
         </BrowserRouter>
       </ThemeProvider>
-    </CharacarterProviderWapper>
+    </CharacarterProviderWrapper>
   </React.StrictMode>,
 );
