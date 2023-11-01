@@ -4,11 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 import GlobalStyles from "../../styles/GlobalStyles";
 import mainTheme from "../../styles/mainTheme";
 import CharacterList from "./CharacterList";
-import { cleanup, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 describe("Given the component CharacterList", () => {
   describe("When CharacterList is initialize", () => {
-    beforeEach(() => {
+    test("It should have strated the list", () => {
+      const ulTagName = "list";
+      const liTagName = "listitem";
+
       render(
         <CharacarterProviderWapper>
           <ThemeProvider theme={mainTheme}>
@@ -19,17 +22,12 @@ describe("Given the component CharacterList", () => {
           </ThemeProvider>
         </CharacarterProviderWapper>,
       );
-    });
-    test("It should have strated the list", () => {
-      const elementList = screen.queryByRole("list");
-      const elementItemList = screen.queryByRole("listitem");
+
+      const elementList = screen.queryByRole(ulTagName);
+      const elementItemList = screen.queryByRole(liTagName);
 
       expect(elementList).toBeInTheDocument();
       expect(elementItemList).toBeNull();
     });
   });
-});
-
-afterEach(() => {
-  cleanup();
 });
