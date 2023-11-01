@@ -1,5 +1,4 @@
 import HomePageStyled from "./HomePageStyled";
-
 import { useContext, useEffect } from "react";
 import mockCharacters from "../../data/mockData";
 import characterStructureApiToCharacterStructure from "../../data/apiSmash";

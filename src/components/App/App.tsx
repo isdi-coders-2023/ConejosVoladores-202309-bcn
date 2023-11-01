@@ -11,6 +11,7 @@ const App = (): React.ReactElement => {
         <Routes>
           <Route path="/home" element={<HomePage />} />
           <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/" element={<Navigate to="character/details/${id}" />} />
         </Routes>
       </MainStyled>
     </div>
