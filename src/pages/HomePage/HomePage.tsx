@@ -1,11 +1,11 @@
-import CharacterList from "../../components/CharacterList/CharacterList";
+import HomePageStyled from "./HomePageStyled";
 
 const HomePage = (): React.ReactElement => {
   return (
-    <>
+    <HomePageStyled>
       <h2>Characters</h2>
-      <CharacterList />
-    </>
+    </HomePageStyled>
   );
 };
+
 export default HomePage;
