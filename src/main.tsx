@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "./styles/mainTheme";
 import GlobalStyles from "./styles/GlobalStyles";
 import CharacarterProviderWapper from "./features/characters/Store/CharactersWapper";
-import "fontsource/press-start-2p";
+import "@fontsource/press-start-2p";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
