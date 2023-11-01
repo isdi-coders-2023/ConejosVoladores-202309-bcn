@@ -12,10 +12,10 @@ const mainTheme: DefaultTheme = {
   },
   typography: {
     mainFontFamily: "Verdana, Geneva, Tahoma, sans-serif",
-    secondaryFontFamily: "'Press Start 2P', sans-serif",
+    secondaryFontFamily: "'Changa Variable', sans-serif",
     propertiesSize: "1,1875rem",
     titleSize: "2.5rem",
-    headerSize: "1.875rem",
+    headerSize: "1.7rem",
     inputTextSize: "1.125rem",
     inputTitleSize: "1.25rem",
   },

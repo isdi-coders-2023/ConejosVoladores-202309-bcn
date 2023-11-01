@@ -2,14 +2,12 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Header from "./Header";
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "../../styles/GlobalStyles";
 import mainTheme from "../../styles/mainTheme";
 
 describe("Given a Header Component", () => {
   beforeEach(() => {
     render(
       <ThemeProvider theme={mainTheme}>
-        <GlobalStyle />
         <Header />
       </ThemeProvider>,
     );

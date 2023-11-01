@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import CharacterList from "./CharacterList";
 import { render, screen } from "@testing-library/react";
-import CharacarterProviderWrapper from "../../features/characters/Store/CharactersWrapper";
+import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given the component CharacterList", () => {
   describe("When CharacterList is initialize", () => {
@@ -11,11 +11,11 @@ describe("Given the component CharacterList", () => {
       const liTagName = "listitem";
 
       render(
-        <CharacarterProviderWrapper>
+        <CharacarterWrapper>
           <ThemeProvider theme={mainTheme}>
             <CharacterList />
           </ThemeProvider>
-        </CharacarterProviderWrapper>,
+        </CharacarterWrapper>,
       );
 
       const elementList = screen.queryByRole(ulTagName);

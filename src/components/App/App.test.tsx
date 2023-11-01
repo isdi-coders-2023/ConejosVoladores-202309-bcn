@@ -2,26 +2,22 @@ import { render, screen } from "@testing-library/react";
 import mainTheme from "../../styles/mainTheme";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyles from "../../styles/GlobalStyles";
 import App from "./App";
-import CharacarterProviderWrapper from "../../features/characters/Store/CharactersWrapper";
+import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given component App", () => {
-  describe("When is initialize", () => {
-    beforeAll(() => {
+  describe("When it is render", () => {
+    test("It should have a HTMLElement main", () => {
       render(
-        <CharacarterProviderWrapper>
+        <CharacarterWrapper>
           <ThemeProvider theme={mainTheme}>
             <BrowserRouter>
-              <GlobalStyles />
               <App />
             </BrowserRouter>
           </ThemeProvider>
-        </CharacarterProviderWrapper>,
+        </CharacarterWrapper>,
       );
-    });
-    test("It should have a HTMLElement main", () => {
-      const elementMain = screen.queryByRole("main");
+      const elementMain = screen.getByRole("main");
 
       expect(elementMain).toBeInTheDocument();
     });
