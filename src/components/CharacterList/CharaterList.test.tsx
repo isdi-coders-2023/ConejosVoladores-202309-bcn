@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import CharacterList from "./CharacterList";
 import { render, screen } from "@testing-library/react";
-import CharacarterProviderWrapper from "../../features/characters/Store/CharactersWrapper";
+import CharacarterProviderWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given the component CharacterList", () => {
   describe("When CharacterList is initialize", () => {

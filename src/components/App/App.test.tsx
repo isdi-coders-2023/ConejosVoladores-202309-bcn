@@ -3,7 +3,7 @@ import mainTheme from "../../styles/mainTheme";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import CharacarterProviderWrapper from "../../features/characters/Store/CharactersWrapper";
+import CharacarterProviderWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given component App", () => {
   describe("When is initialize", () => {

@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import HomePage from "./HomePage";
 import { screen, render } from "@testing-library/react";
 import mainTheme from "../../styles/mainTheme";
-import CharacarterProviderWrapper from "../../features/characters/Store/CharactersWrapper";
+import CharacarterProviderWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given a HomePage component", () => {
   describe("When it is called", () => {
