@@ -1,7 +1,5 @@
 import { ThemeProvider } from "styled-components";
 import CharacarterProviderWapper from "../../features/characters/strore/CharactersWapper";
-import { BrowserRouter } from "react-router-dom";
-import GlobalStyles from "../../styles/GlobalStyles";
 import mainTheme from "../../styles/mainTheme";
 import CharacterList from "./CharacterList";
 import { render, screen } from "@testing-library/react";
@@ -15,10 +13,7 @@ describe("Given the component CharacterList", () => {
       render(
         <CharacarterProviderWapper>
           <ThemeProvider theme={mainTheme}>
-            <BrowserRouter>
-              <GlobalStyles />
-              <CharacterList />
-            </BrowserRouter>
+            <CharacterList />
           </ThemeProvider>
         </CharacarterProviderWapper>,
       );
