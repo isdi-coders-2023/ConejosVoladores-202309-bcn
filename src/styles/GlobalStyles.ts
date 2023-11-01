@@ -1,36 +1,48 @@
 import { createGlobalStyle } from "styled-components";
+import "@fontsource/press-start-2p";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   *,
   ::after,
-  ::before{
+  ::before {
     box-sizing: border-box;
   }
 
-  h1,h2,body{
+  h1,
+  h2,
+  body {
     margin: 0;
     padding:0;
   }
 
-  button{
+  button {
     margin:0;
     background-color: transparent;
     padding: 0;
   }
 
-  ul{
+  ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  body{
-    font-family: ${({ theme }) => theme.typography["main-font-fammily"]};
-    color: ${({ theme }) => theme.color.font};
-    background-color: ${({ theme }) => theme.color.main};
-    
+  body {
+    font-family: ${({ theme }) => theme.typography["mainFontFamily"]};
+    color: ${({ theme }) => theme.color["mainFont"]};
+    background-color: ${({ theme }) => theme.color["mainBackground"]};
+    font-size: ${({ theme }) => theme.typography["propertiesSize"]};
   }
 
+  .main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    padding: 22px;
+  }
+  
 `;
 
-export default GlobalStyle;
+export default GlobalStyles;

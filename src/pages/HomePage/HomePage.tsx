@@ -1,11 +1,11 @@
-import NavigationBar from "../../components/NavigationBar/NavigationBar";
+import HomePageStyled from "./HomePageStyled";
 
 const HomePage = (): React.ReactElement => {
   return (
-    <>
+    <HomePageStyled>
       <h2>Characters</h2>
-      <NavigationBar />
-    </>
+    </HomePageStyled>
   );
 };
+
 export default HomePage;
