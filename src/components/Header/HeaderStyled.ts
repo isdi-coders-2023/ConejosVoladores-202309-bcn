@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const HeaderStyled = styled.header`
   .header {
-    width: 100vw;
     height: 88px;
     padding: 20px 22px;
     display: flex;
@@ -11,6 +10,9 @@ const HeaderStyled = styled.header`
     gap: 35px;
     flex-shrink: 0;
     background-color: ${({ theme }) => theme.color["containerBackground"]};
+
+    &--color {
+    }
 
     &__logo {
       width: 48px;
