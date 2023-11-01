@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MainHeaderStyled = styled.header`
+const HeaderStyled = styled.header`
   .header {
     height: 88px;
     padding: 20px 22px;
@@ -26,4 +26,5 @@ const MainHeaderStyled = styled.header`
     }
   }
 `;
-export default MainHeaderStyled;
+
+export default HeaderStyled;

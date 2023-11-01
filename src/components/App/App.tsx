@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import MainHeader from "../MainHeader/MainHeader";
+import Header from "../Header/Header";
 import HomePage from "../../pages/HomePage/HomePage";
 
 const App = (): React.ReactElement => {
   return (
     <div className="main-container">
-      <MainHeader />
+      <Header />
       <main className="main-content>">
         <Routes>
           <Route path="/home" element={<HomePage />} />
