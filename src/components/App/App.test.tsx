@@ -17,7 +17,7 @@ describe("Given component App", () => {
           </ThemeProvider>
         </CharacarterWrapper>,
       );
-      const elementMain = screen.queryByRole("main");
+      const elementMain = screen.getByRole("main");
 
       expect(elementMain).toBeInTheDocument();
     });

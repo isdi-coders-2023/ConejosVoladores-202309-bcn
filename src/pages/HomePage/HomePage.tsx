@@ -18,11 +18,7 @@ const HomePage = (): React.ReactElement => {
     loadCharacters(structuredMockCharacters);
   }, [loadCharacters]);
 
-  return (
-    <HomePageStyled>
-      <h2>Characters</h2>
-    </HomePageStyled>
-  );
+  return <HomePageStyled>Characters</HomePageStyled>;
 };
 
 export default HomePage;
