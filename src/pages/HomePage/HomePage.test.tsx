@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import HomePage from "./HomePage";
 import { screen, render } from "@testing-library/react";
 import mainTheme from "../../styles/mainTheme";
-import CharacarterProviderWrapper from "../../features/characters/Store/CharactersWrapper";
+import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given a HomePage component", () => {
   describe("When it is called", () => {
@@ -10,11 +10,11 @@ describe("Given a HomePage component", () => {
       const expectedText = "Characters";
 
       render(
-        <CharacarterProviderWrapper>
+        <CharacarterWrapper>
           <ThemeProvider theme={mainTheme}>
             <HomePage />
           </ThemeProvider>
-        </CharacarterProviderWrapper>,
+        </CharacarterWrapper>,
       );
 
       const text = screen.getByText(expectedText);

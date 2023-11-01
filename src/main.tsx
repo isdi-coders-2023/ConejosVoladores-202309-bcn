@@ -4,19 +4,19 @@ import App from "./components/App/App";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "./styles/mainTheme";
-import GlobalStyles from "./styles/GlobalStyles";
-import "@fontsource/press-start-2p";
-import CharacarterProviderWrapper from "./features/characters/Store/CharactersWrapper";
+import CharacarterWrapper from "./features/characters/store/CharactersWrapper";
+import GlobalStyle from "./styles/GlobalStyle";
+import "@fontsource-variable/changa";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <CharacarterProviderWrapper>
+    <CharacarterWrapper>
       <ThemeProvider theme={mainTheme}>
         <BrowserRouter>
-          <GlobalStyles />
+          <GlobalStyle />
           <App />
         </BrowserRouter>
       </ThemeProvider>
-    </CharacarterProviderWrapper>
+    </CharacarterWrapper>
   </React.StrictMode>,
 );

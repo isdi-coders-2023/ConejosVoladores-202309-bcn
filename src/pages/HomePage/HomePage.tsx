@@ -4,7 +4,7 @@ import { useContext, useEffect } from "react";
 import mockCharacters from "../../data/mockData";
 import characterStructureApiToCharacterStructure from "../../data/apiSmash";
 import { CharacterStructure } from "../../features/characters/types";
-import CharactersContext from "../../features/characters/Store/CharacterContext";
+import CharactersContext from "../../features/characters/store/CharactersContext";
 
 const HomePage = (): React.ReactElement => {
   const { loadCharacters } = useContext(CharactersContext);
@@ -18,11 +18,7 @@ const HomePage = (): React.ReactElement => {
     loadCharacters(structuredMockCharacters);
   }, [loadCharacters]);
 
-  return (
-    <HomePageStyled>
-      <h2>Characters</h2>
-    </HomePageStyled>
-  );
+  return <HomePageStyled>Characters</HomePageStyled>;
 };
 
 export default HomePage;
