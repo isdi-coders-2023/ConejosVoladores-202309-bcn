@@ -4,7 +4,7 @@ import { useContext, useEffect } from "react";
 import mockCharacters from "../../data/mockData";
 import characterStructureApiToCharacterStructure from "../../data/apiSmash";
 import { CharacterStructure } from "../../features/characters/types";
-import CharactersContext from "../../features/characters/strore/CharacterContext";
+import CharactersContext from "../../features/characters/Store/CharacterContext";
 
 const HomePage = (): React.ReactElement => {
   const { loadCharacters } = useContext(CharactersContext);

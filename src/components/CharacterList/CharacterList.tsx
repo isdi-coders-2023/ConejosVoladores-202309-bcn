@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import CharacterListStyled from "./CharacterListStyle";
-import CharactersContext from "../../features/characters/strore/CharacterContext";
+import CharactersContext from "../../features/characters/Store/CharacterContext";
 
 const CharacterList = (): React.ReactElement => {
   const { characters } = useContext(CharactersContext);
