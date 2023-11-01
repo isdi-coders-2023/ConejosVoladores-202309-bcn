@@ -28,10 +28,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: ${({ theme }) => theme.typography["mainFontFamily"]};
-    color: ${({ theme }) => theme.color["mainFont"]};
-    background-color: ${({ theme }) => theme.color["mainBackground"]};
-    font-size: ${({ theme }) => theme.typography["propertiesSize"]};
+    font-family: ${({ theme }) => theme.typography.mainFontFamily};
+    color: ${({ theme }) => theme.color.mainFont};
+    background-color: ${({ theme }) => theme.color.mainBackground};
+    font-size: ${({ theme }) => theme.typography.propertiesSize};
   }
 
   .main-container {
