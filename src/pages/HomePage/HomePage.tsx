@@ -2,22 +2,21 @@ import HomePageStyled from "./HomePageStyled";
 
 import { useContext, useEffect } from "react";
 import mockCharacters from "../../data/mockData";
-import CharactersContext from "../../features/characters/strore/CharactersContext";
 import characterStructureApiToCharacterStructure from "../../data/apiSmash";
 import { CharacterStructure } from "../../features/characters/types";
+import CharactersContext from "../../features/characters/strore/CharacterContext";
 
 const HomePage = (): React.ReactElement => {
-  const structuredMockCharacters = mockCharacters.map(
-    (character): CharacterStructure => {
-      return characterStructureApiToCharacterStructure(character);
-    },
-  );
   const { loadCharacters } = useContext(CharactersContext);
+  useEffect(() => {
+    const structuredMockCharacters = mockCharacters.map(
+      (character): CharacterStructure => {
+        return characterStructureApiToCharacterStructure(character);
+      },
+    );
 
-  useEffect(
-    () => loadCharacters(structuredMockCharacters),
-    [structuredMockCharacters, loadCharacters],
-  );
+    loadCharacters(structuredMockCharacters);
+  }, [loadCharacters]);
 
   return (
     <HomePageStyled>
