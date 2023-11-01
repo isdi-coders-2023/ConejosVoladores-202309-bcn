@@ -34,6 +34,14 @@ const GlobalStyles = createGlobalStyle`
     font-size: ${({ theme }) => theme.typography["propertiesSize"]};
   }
 
+  .main-container {
+    width: 100vw;
+    height: 100 vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+  }
+
 `;
 
 export default GlobalStyles;
