@@ -6,8 +6,8 @@ import App from "./App";
 import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given component App", () => {
-  describe("When is initialize", () => {
-    beforeAll(() => {
+  describe("When it is render", () => {
+    test("It should have a HTMLElement main", () => {
       render(
         <CharacarterWrapper>
           <ThemeProvider theme={mainTheme}>
@@ -17,8 +17,6 @@ describe("Given component App", () => {
           </ThemeProvider>
         </CharacarterWrapper>,
       );
-    });
-    test("It should have a HTMLElement main", () => {
       const elementMain = screen.queryByRole("main");
 
       expect(elementMain).toBeInTheDocument();
