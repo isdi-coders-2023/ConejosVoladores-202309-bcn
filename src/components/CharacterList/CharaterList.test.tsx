@@ -1,5 +1,5 @@
 import { ThemeProvider } from "styled-components";
-import CharacarterProviderWapper from "../../features/characters/strore/CharactersWapper";
+import CharacarterProviderWapper from "../../features/characters/strore/CharactersWrapper";
 import mainTheme from "../../styles/mainTheme";
 import CharacterList from "./CharacterList";
 import { render, screen } from "@testing-library/react";
