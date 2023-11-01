@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import "@fontsource/press-start-2p";
 
 const GlobalStyle = createGlobalStyle`
   *,
