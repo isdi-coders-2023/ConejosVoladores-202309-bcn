@@ -20,7 +20,7 @@ export default defineConfig({
         "**/types.ts",
         "**/*.d.ts",
         "**/src/main.tsx",
-        "**/src/styles/GlobalStyles.ts*",
+        "**/src/styles/GlobalStyles.ts",
       ],
     },
   },
