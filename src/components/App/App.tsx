@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import MainHeader from "../MainHeader/MainHeader";
+import Header from "../Header/Header";
 
 const App = (): React.ReactElement => {
   return (
     <>
-      <MainHeader />
+      <Header />
       <main className="main-content>">
         <Routes>
           <Route path="/home" />
