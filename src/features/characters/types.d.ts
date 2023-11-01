@@ -4,6 +4,6 @@ export interface CharacterStructure {
   availability: string;
   appears: string;
   attack: string;
-  amashtype: string;
+  smashtype: string;
   imageUrl: string;
 }
