@@ -1,3 +1,5 @@
+import HomePageStyled from "./HomePageStyled";
+
 import { useContext, useEffect } from "react";
 import mockCharacters from "../../data/mockData";
 import CharactersContext from "../../features/characters/strore/CharactersContext";
@@ -17,7 +19,11 @@ const HomePage = (): React.ReactElement => {
     [structuredMockCharacters, loadCharacters],
   );
 
-  return <h2>Characters</h2>;
+  return (
+    <HomePageStyled>
+      <h2>Characters</h2>
+    </HomePageStyled>
+  );
 };
 
 export default HomePage;
