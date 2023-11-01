@@ -1,5 +1,5 @@
 export interface CharacterStructureApi {
-  id: number;
+  id: string;
   name: string;
   availability: string;
   alsoAppearsIn: string[];
