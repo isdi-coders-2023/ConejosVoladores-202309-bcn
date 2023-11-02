@@ -1,8 +1,8 @@
-import { CharacterStructureApi } from "./types";
+import { CharacterStructureApi } from "../features/characters/types";
 
 const mockCharacters: CharacterStructureApi[] = [
   {
-    id: "1",
+    id: 1,
     name: "Mario",
     availability: "Starter",
     alsoAppearsIn: ["SSB", "Melee", "Brawl", "SSB4"],
@@ -21,7 +21,7 @@ const mockCharacters: CharacterStructureApi[] = [
     },
   },
   {
-    id: "2",
+    id: 2,
     name: "Donkey Kong",
     availability: "Starter",
     alsoAppearsIn: ["SSB", "Melee", "Brawl", "SSB4"],
