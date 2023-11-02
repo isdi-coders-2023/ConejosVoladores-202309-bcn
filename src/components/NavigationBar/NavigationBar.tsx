@@ -8,10 +8,11 @@ const NavigationBar = (): React.ReactElement => {
 
   return (
     <NavigationBarStyled>
-      <ul>
+      <ul className="footer">
         <li>
           <NavLink to="/home">
             <img
+              className="footer__icon"
               src={`images/${
                 pathname === "/home" ? "button-home--active" : "button-home"
               }.svg`}
@@ -22,6 +23,7 @@ const NavigationBar = (): React.ReactElement => {
         <li>
           <NavLink to="/add" end>
             <img
+              className="footer__icon"
               src={`images/${
                 pathname === "/add" ? "button-add--active" : "button-add"
               }.svg`}
