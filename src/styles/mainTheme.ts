@@ -10,6 +10,7 @@ const mainTheme: DefaultTheme = {
     mainFont: "#000",
     secondaryFont: "#fff",
     inputBackground: "#fff",
+    logoMain: "#FF000",
   },
   typography: {
     mainFontFamily: "Verdana, Geneva, Tahoma, sans-serif",
