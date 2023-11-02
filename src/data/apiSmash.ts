@@ -1,5 +1,7 @@
-import { CharacterStructure } from "../features/characters/types";
-import { CharacterStructureApi } from "./types";
+import {
+  CharacterStructure,
+  CharacterStructureApi,
+} from "../features/characters/types";
 
 const characterStructureApiToCharacterStructure = ({
   id,
