@@ -7,13 +7,11 @@ const CharacterList = (): React.ReactElement => {
   const { characters } = useContext(CharactersContext);
   return (
     <CharacterListStyled>
-      {characters.map((character) => {
-        return (
-          <li key={character.id}>
-            <CharacterCard character={character} />
-          </li>
-        );
-      })}
+      {characters.map((character) => (
+        <li key={character.id}>
+          <CharacterCard character={character} />
+        </li>
+      ))}
     </CharacterListStyled>
   );
 };
