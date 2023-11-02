@@ -20,10 +20,10 @@ const HomePage = (): React.ReactElement => {
   }, [loadCharacters]);
 
   return (
-    <>
-      <HomePageStyled>Characters</HomePageStyled>
+    <HomePageStyled>
+      <h2 className="homepage__title">Characters</h2>
       <CharacterList />
-    </>
+    </HomePageStyled>
   );
 };
 
