@@ -13,7 +13,7 @@ const mockCharacters: CharacterStructureApi[] = [
     images: {
       icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501674/Ultimate%20Characters/Icons/120px-MarioHeadSSBUWebsite_hkzzpq.png",
       portrait:
-        "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501176/Ultimate%20Characters/Portraits/350_emjsmz.png",
+        "https://raw.githubusercontent.com/HugoVS26/ConejosVoladores-202309-bcn-API/main/images/1.webp",
     },
     series: {
       icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501902/Series/mario_ncgezx.svg",
@@ -32,7 +32,7 @@ const mockCharacters: CharacterStructureApi[] = [
     images: {
       icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501698/Ultimate%20Characters/Icons/120px-DonkeyKongHeadSSBUWebsite_h8qz9i.png",
       portrait:
-        "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501254/Ultimate%20Characters/Portraits/350_xvyuzj.png",
+        "https://raw.githubusercontent.com/HugoVS26/ConejosVoladores-202309-bcn-API/main/images/2.webp",
     },
     series: {
       icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501875/Series/donkey-kong_tppruc.svg",
