@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "../Header/Header";
 import HomePage from "../../pages/HomePage/HomePage";
 import MainStyled from "./AppStyles";
+import NavigationBar from "../NavigationBar/NavigationBar";
 
 const App = (): React.ReactElement => {
   return (
@@ -13,6 +14,7 @@ const App = (): React.ReactElement => {
           <Route path="/" element={<Navigate to="/home" />} />
         </Routes>
       </MainStyled>
+      <NavigationBar />
     </div>
   );
 };
