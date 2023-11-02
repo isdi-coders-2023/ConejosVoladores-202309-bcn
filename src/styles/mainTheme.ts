@@ -3,6 +3,7 @@ import { DefaultTheme } from "styled-components";
 const mainTheme: DefaultTheme = {
   color: {
     containerBackground: "#fbd000",
+    disabledButtonBackground: "#B09200",
     mainBackground: "#049cd8",
     errorBackground: "#e52521",
     successfullBackground: "#43b047",
