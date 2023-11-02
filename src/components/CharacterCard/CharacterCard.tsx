@@ -24,7 +24,7 @@ const CharacterCard = ({
         <span>{attack}</span>
       </div>
       <div className="character-card__icon-container">
-        <NavLink to={`/character-detail/${id}`}>
+        <NavLink to={`/character-detail/${id}/`}>
           <img
             src={"images/button-info.svg"}
             alt="Home button"
@@ -40,7 +40,7 @@ const CharacterCard = ({
             height="48"
           />
         </button>
-        <NavLink to={`/character-edit/${id}`} end>
+        <NavLink to={`/character-edit/${id}/`} end>
           <img
             src={"images/button-edit.svg"}
             alt="Add button"
