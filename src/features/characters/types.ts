@@ -1,13 +1,3 @@
-export interface CharacterStructure {
-  id: number;
-  name: string;
-  availability: string;
-  appears: string[];
-  series: string;
-  attack: string;
-  smashtype: string;
-  imageUrl: string;
-}
 export interface CharacterStructureApi {
   id: number;
   name: string;
@@ -25,4 +15,15 @@ export interface CharacterStructureApi {
     icon: string;
     name: string;
   };
+}
+
+export interface CharacterStructure {
+  id: number;
+  name: string;
+  availability: string;
+  appears: string[];
+  series: string;
+  attack: string;
+  smashtype: string;
+  imageUrl: string;
 }
