@@ -1,11 +1,10 @@
 import HomePageStyled from "./HomePageStyled";
-
 import { useContext, useEffect } from "react";
 import apiCharacters from "../../data/apiData";
-import characterStructureApiToCharacterStructure from "../../data/apiSmash";
 import { CharacterStructure } from "../../features/characters/types";
 import CharactersContext from "../../features/characters/store/CharactersContext";
 import CharacterList from "../../components/CharacterList/CharacterList";
+import { characterStructureApiToCharacterStructure } from "../../data/apiSmash";
 
 const HomePage = (): React.ReactElement => {
   const { loadCharacters } = useContext(CharactersContext);
