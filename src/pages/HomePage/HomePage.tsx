@@ -11,9 +11,8 @@ const HomePage = (): React.ReactElement => {
   const { loadCharacters } = useContext(CharactersContext);
   useEffect(() => {
     const structuredMockCharacters = apiCharacters.map(
-      (character): CharacterStructure => {
-        return characterStructureApiToCharacterStructure(character);
-      },
+      (character): CharacterStructure =>
+        characterStructureApiToCharacterStructure(character),
     );
 
     loadCharacters(structuredMockCharacters);
