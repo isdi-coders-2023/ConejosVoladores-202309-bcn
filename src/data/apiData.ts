@@ -2,41 +2,41 @@ import { CharacterStructureApi } from "../features/characters/types";
 
 const apiCharacters: CharacterStructureApi[] = [
   {
-    id: 1,
-    name: "Mario",
+    id: 3,
+    name: "Link",
     availability: "Starter",
     alsoAppearsIn: ["SSB", "Melee", "Brawl", "SSB4"],
     smash: {
-      attack: "Mario Finale",
-      type: "Directional",
+      attack: "Triforce Slash",
+      type: "Trapping/Directional",
     },
     images: {
-      icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501674/Ultimate%20Characters/Icons/120px-MarioHeadSSBUWebsite_hkzzpq.png",
+      icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501722/Ultimate%20Characters/Icons/120px-LinkHeadSSBUWebsite_pzo2jz.png",
       portrait:
-        "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501176/Ultimate%20Characters/Portraits/350_emjsmz.png",
+        "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501273/Ultimate%20Characters/Portraits/350_shjp6c.png",
     },
     series: {
-      icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501902/Series/mario_ncgezx.svg",
-      name: "Mario",
+      icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501930/Series/the-legend-of-zelda_naf34b.svg",
+      name: "The Legend of Zelda",
     },
   },
   {
-    id: 2,
-    name: "Donkey Kong",
+    id: 4,
+    name: "Yoshi",
     availability: "Starter",
     alsoAppearsIn: ["SSB", "Melee", "Brawl", "SSB4"],
     smash: {
-      attack: "Konga Beat",
-      type: "Focused",
+      attack: "Super Dragon",
+      type: "Transformation",
     },
     images: {
-      icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501698/Ultimate%20Characters/Icons/120px-DonkeyKongHeadSSBUWebsite_h8qz9i.png",
+      icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1595197033/Ultimate%20Characters/Icons/yzfsd5sz2h6izdgre4ub.png",
       portrait:
-        "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501254/Ultimate%20Characters/Portraits/350_xvyuzj.png",
+        "https://res.cloudinary.com/dfen7mkm8/image/upload/v1595197033/Ultimate%20Characters/Portraits/lfacckrdfx7im91l9j3c.png",
     },
     series: {
-      icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501875/Series/donkey-kong_tppruc.svg",
-      name: "Donkey Kong",
+      icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1595197033/Series/murkcxf7ykhhz3muwo7y.svg",
+      name: "Yoshi",
     },
   },
 ];
