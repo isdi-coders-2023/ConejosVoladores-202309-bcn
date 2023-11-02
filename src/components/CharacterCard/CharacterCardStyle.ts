@@ -32,6 +32,15 @@ const CharacterCardContainer = styled.div`
       display: flex;
       gap: 37px;
       justify-content: center;
+
+      &__image {
+        border-radius: 40px;
+
+        &:active {
+          filter: invert(100%);
+          border: 1px solid ${({ theme }) => theme.color.secondaryFont};
+        }
+      }
     }
   }
 `;

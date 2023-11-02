@@ -26,26 +26,29 @@ const CharacterCard = ({
       <div className="character-card__icon-container">
         <NavLink to={`/character-details/${id}/`}>
           <img
-            src={"images/button-info.svg"}
+            src={"images/button-info.webp"}
             alt="Go to character details"
             width="48"
             height="48"
+            className="character-card__icon-container__image"
           />
         </NavLink>
         <button>
           <img
-            src={"images/button-trash.svg"}
+            src={"images/button-trash.webp"}
             alt="Eliminate character"
             width="48"
             height="48"
+            className="character-card__icon-container__image"
           />
         </button>
         <NavLink to={`/character-edit/${id}/`} end>
           <img
-            src={"images/button-edit.svg"}
+            src={"images/button-edit.webp"}
             alt="Go to edit character"
             width="48"
             height="48"
+            className="character-card__icon-container__image"
           />
         </NavLink>
       </div>
