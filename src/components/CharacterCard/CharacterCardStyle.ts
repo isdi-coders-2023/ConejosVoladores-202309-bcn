@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-const CharacterCardContainer = styled.div`
+const CharacterCardStyle = styled.div`
   background-color: ${({ theme }) => theme.color.containerBackground};
   padding: 22px;
   display: flex;
@@ -45,4 +45,4 @@ const CharacterCardContainer = styled.div`
   }
 `;
 
-export default CharacterCardContainer;
+export default CharacterCardStyle;

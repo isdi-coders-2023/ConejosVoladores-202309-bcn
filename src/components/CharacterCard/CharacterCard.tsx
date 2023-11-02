@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { CharacterStructure } from "../../features/characters/types";
-import CharacterCardContainer from "./CharacterCardStyle";
+import CharacterCardStyle from "./CharacterCardStyle";
 
 interface CharacterCardProps {
   character: CharacterStructure;
@@ -10,7 +10,7 @@ const CharacterCard = ({
   character: { availability, imageUrl, name, attack, id },
 }: CharacterCardProps): React.ReactElement => {
   return (
-    <CharacterCardContainer>
+    <CharacterCardStyle>
       <img
         className="character-card__image"
         src={imageUrl}
@@ -52,7 +52,7 @@ const CharacterCard = ({
           />
         </NavLink>
       </div>
-    </CharacterCardContainer>
+    </CharacterCardStyle>
   );
 };
 export default CharacterCard;
