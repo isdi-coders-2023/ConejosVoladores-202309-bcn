@@ -13,7 +13,7 @@ const apiCharacters: CharacterStructureApi[] = [
     images: {
       icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501722/Ultimate%20Characters/Icons/120px-LinkHeadSSBUWebsite_pzo2jz.png",
       portrait:
-        "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501273/Ultimate%20Characters/Portraits/350_shjp6c.png",
+        "https://raw.githubusercontent.com/HugoVS26/ConejosVoladores-202309-bcn-API/main/images/3.webp",
     },
     series: {
       icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501930/Series/the-legend-of-zelda_naf34b.svg",
@@ -32,7 +32,7 @@ const apiCharacters: CharacterStructureApi[] = [
     images: {
       icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1595197033/Ultimate%20Characters/Icons/yzfsd5sz2h6izdgre4ub.png",
       portrait:
-        "https://res.cloudinary.com/dfen7mkm8/image/upload/v1595197033/Ultimate%20Characters/Portraits/lfacckrdfx7im91l9j3c.png",
+        "https://raw.githubusercontent.com/HugoVS26/ConejosVoladores-202309-bcn-API/main/images/4.webp",
     },
     series: {
       icon: "https://res.cloudinary.com/dfen7mkm8/image/upload/v1595197033/Series/murkcxf7ykhhz3muwo7y.svg",
