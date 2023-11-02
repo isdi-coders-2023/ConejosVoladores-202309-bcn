@@ -18,6 +18,7 @@ describe("Given the CharacterCardComponent", () => {
         appears: ["SSB", "Melee", "Brawl", "SSB4"],
         attack: "Mario Finale",
         smashtype: "Directional",
+        series: "Mario",
       };
 
       render(
@@ -31,7 +32,9 @@ describe("Given the CharacterCardComponent", () => {
       );
 
       const name = screen.getByRole("heading") as HTMLHeadingElement;
-      const img = screen.getByAltText("imagen de Mario") as HTMLImageElement;
+      const img = screen.getByRole("img", {
+        name: "imagen de Mario",
+      }) as HTMLImageElement;
 
       expect(img.src).toBe(marioInformation.imageUrl);
       expect(name.textContent).toBe(marioInformation.name);

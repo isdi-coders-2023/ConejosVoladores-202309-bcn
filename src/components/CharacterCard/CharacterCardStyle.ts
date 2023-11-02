@@ -16,6 +16,7 @@ const CharacterCardContainer = styled.div`
       height: 110px;
       align-self: center;
     }
+
     &__property {
       display: flex;
       flex-direction: column;
@@ -26,6 +27,7 @@ const CharacterCardContainer = styled.div`
         padding: 5px 0;
       }
     }
+
     &__icon-container {
       display: flex;
       gap: 37px;

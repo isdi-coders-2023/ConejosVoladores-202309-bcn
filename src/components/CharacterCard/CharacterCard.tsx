@@ -24,10 +24,10 @@ const CharacterCard = ({
         <span>{attack}</span>
       </div>
       <div className="character-card__icon-container">
-        <NavLink to={`/character-detail/${id}/`}>
+        <NavLink to={`/character-details/${id}/`}>
           <img
             src={"images/button-info.svg"}
-            alt="Home button"
+            alt="Go to character details"
             width="48"
             height="48"
           />
@@ -35,7 +35,7 @@ const CharacterCard = ({
         <button>
           <img
             src={"images/button-trash.svg"}
-            alt="Add button"
+            alt="Eliminate character"
             width="48"
             height="48"
           />
@@ -43,7 +43,7 @@ const CharacterCard = ({
         <NavLink to={`/character-edit/${id}/`} end>
           <img
             src={"images/button-edit.svg"}
-            alt="Add button"
+            alt="Go to edit character"
             width="48"
             height="48"
           />
