@@ -1,10 +1,10 @@
 import { http, HttpResponse } from "msw";
-import apiCharacters from "../data/apiData";
+import mockCharacters from "./mockData";
 
-const urlApi = "url";
+const urlApi = import.meta.env.VITE_API_URL;
 
 export const handlers = [
-  http.get(urlApi, () => {
-    return HttpResponse.json(apiCharacters);
+  http.get(`${urlApi}/characters`, () => {
+    return HttpResponse.json(mockCharacters);
   }),
 ];
