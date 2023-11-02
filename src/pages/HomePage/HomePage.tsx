@@ -5,6 +5,7 @@ import apiCharacters from "../../data/apiData";
 import characterStructureApiToCharacterStructure from "../../data/apiSmash";
 import { CharacterStructure } from "../../features/characters/types";
 import CharactersContext from "../../features/characters/store/CharactersContext";
+import CharacterList from "../../components/CharacterList/CharacterList";
 
 const HomePage = (): React.ReactElement => {
   const { loadCharacters } = useContext(CharactersContext);
@@ -18,7 +19,12 @@ const HomePage = (): React.ReactElement => {
     loadCharacters(structuredMockCharacters);
   }, [loadCharacters]);
 
-  return <HomePageStyled>Characters</HomePageStyled>;
+  return (
+    <>
+      <HomePageStyled>Characters</HomePageStyled>
+      <CharacterList />
+    </>
+  );
 };
 
 export default HomePage;

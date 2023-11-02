@@ -4,6 +4,7 @@ declare module "styled-components" {
   export interface DefaultTheme {
     color: {
       containerBackground: string;
+      disabledButtonBackground: string;
       mainBackground: string;
       errorBackground: string;
       successfullBackground: string;
