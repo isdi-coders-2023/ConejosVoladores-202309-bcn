@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1,
   h2,
+  h3,
   body {
     margin: 0;
     padding:0;
@@ -18,6 +19,8 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     background-color: transparent;
     padding: 0;
+    border: none;
+    cursor: pointer;
   }
 
   ul {

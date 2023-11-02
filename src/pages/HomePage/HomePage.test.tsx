@@ -3,6 +3,7 @@ import HomePage from "./HomePage";
 import { screen, render } from "@testing-library/react";
 import mainTheme from "../../styles/mainTheme";
 import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Given a HomePage component", () => {
   describe("When it is called", () => {
@@ -11,13 +12,15 @@ describe("Given a HomePage component", () => {
 
       render(
         <CharacarterWrapper>
-          <ThemeProvider theme={mainTheme}>
-            <HomePage />
-          </ThemeProvider>
+          <BrowserRouter>
+            <ThemeProvider theme={mainTheme}>
+              <HomePage />
+            </ThemeProvider>
+          </BrowserRouter>
         </CharacarterWrapper>,
       );
 
-      const text = screen.getByText(expectedText);
+      const text = screen.getByRole("heading", { name: expectedText });
 
       expect(text).toBeInTheDocument();
     });
