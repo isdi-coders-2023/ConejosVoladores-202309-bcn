@@ -3,6 +3,7 @@ export interface CharacterStructure {
   name: string;
   availability: string;
   appears: string[];
+  series: string;
   attack: string;
   smashtype: string;
   imageUrl: string;

@@ -8,6 +8,7 @@ const characterStructureApiToCharacterStructure = ({
   alsoAppearsIn,
   smash,
   images,
+  series,
 }: CharacterStructureApi): CharacterStructure => {
   const characterStructure = {
     id: Number(id),
@@ -17,6 +18,7 @@ const characterStructureApiToCharacterStructure = ({
     attack: smash.attack,
     smashtype: smash.type,
     imageUrl: images.portrait,
+    series: series.name,
   };
 
   return characterStructure;
