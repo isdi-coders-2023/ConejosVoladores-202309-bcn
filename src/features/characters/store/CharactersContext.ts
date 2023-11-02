@@ -1,10 +1,5 @@
 import { createContext } from "react";
-import { CharacterStructure } from "../types";
-
-interface CharactersContextStructure {
-  characters: CharacterStructure[];
-  loadCharacters: (characters: CharacterStructure[]) => void;
-}
+import { CharactersContextStructure } from "./CharactersContextStructure";
 
 const CharactersContext = createContext<CharactersContextStructure>(
   {} as CharactersContextStructure,
