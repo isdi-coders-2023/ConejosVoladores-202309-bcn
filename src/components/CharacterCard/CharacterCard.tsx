@@ -7,7 +7,7 @@ interface CharacterCardProps {
 }
 
 const CharacterCard = ({
-  character: { availability, imageUrl, name, attack, id },
+  character: { availability, imageUrl, name, attack },
 }: CharacterCardProps): React.ReactElement => {
   return (
     <CharacterCardStyle>
@@ -24,7 +24,7 @@ const CharacterCard = ({
         <span>{attack}</span>
       </div>
       <div className="character-card__icon-container">
-        <NavLink to={`/character-details/${id}/`}>
+        <NavLink to={`/`}>
           <img
             src={"images/button-info.webp"}
             alt="Go to character details"
@@ -42,7 +42,7 @@ const CharacterCard = ({
             className="character-card__icon-container__image"
           />
         </button>
-        <NavLink to={`/character-edit/${id}/`} end>
+        <NavLink to={`/`} end>
           <img
             src={"images/button-edit.webp"}
             alt="Go to edit character"
