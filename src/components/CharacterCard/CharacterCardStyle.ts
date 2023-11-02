@@ -9,7 +9,6 @@ const CharacterCardContainer = styled.div`
   border-radius: 24px;
   width: calc(100vw - 44px);
   max-width: 316px;
-  height: 339px;
 
   .character-card {
     &__image {
@@ -26,6 +25,11 @@ const CharacterCardContainer = styled.div`
       & * {
         padding: 5px 0;
       }
+    }
+    &__icon-container {
+      display: flex;
+      gap: 37px;
+      justify-content: center;
     }
   }
 `;

@@ -6,6 +6,7 @@ const CharacterListStyled = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 44px;
+  padding: 27px 0;
 `;
 
 export default CharacterListStyled;
