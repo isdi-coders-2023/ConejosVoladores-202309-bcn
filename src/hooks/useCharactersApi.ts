@@ -1,20 +1,25 @@
+import { useCallback, useContext } from "react";
 import {
   characterStructureApiToCharacterStructure,
   getCharacters,
 } from "../data/apiSmash";
-import {
-  CharacterStructure,
-  CharacterStructureApi,
-} from "../features/characters/types";
+import { CharacterStructureApi } from "../features/characters/types";
+import CharactersContext from "../features/characters/store/CharactersContext";
 
-export const useCharactersApi = async (): Promise<CharacterStructure[]> => {
-  const response = await getCharacters();
+export const useCharactersApi = () => {
+  const { loadCharacters } = useContext(CharactersContext);
 
-  const charactersApi = (await response.json()) as CharacterStructureApi[];
+  const loadCharactersApi = useCallback(async () => {
+    const response = await getCharacters();
 
-  const characters = charactersApi.map((characterApi) =>
-    characterStructureApiToCharacterStructure(characterApi),
-  );
+    const charactersApi = (await response.json()) as CharacterStructureApi[];
 
-  return characters;
+    const characters = charactersApi.map((characterApi) =>
+      characterStructureApiToCharacterStructure(characterApi),
+    );
+
+    loadCharacters(characters);
+  }, [loadCharacters]);
+
+  return { loadCharactersApi };
 };

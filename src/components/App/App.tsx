@@ -6,16 +6,16 @@ import NavigationBar from "../NavigationBar/NavigationBar";
 
 const App = (): React.ReactElement => {
   return (
-    <div className="main-container">
+    <AppStyled>
       <Header />
-      <AppStyled className="main-content>">
+      <div className="main-container">
         <Routes>
           <Route path="/home" element={<HomePage />} />
           <Route path="/" element={<Navigate to="/home" />} />
         </Routes>
-      </AppStyled>
+      </div>
       <NavigationBar />
-    </div>
+    </AppStyled>
   );
 };
 
