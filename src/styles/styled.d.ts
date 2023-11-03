@@ -11,6 +11,7 @@ declare module "styled-components" {
       mainFont: string;
       secondaryFont: string;
       inputBackground: string;
+      logoMain: string;
     };
     typography: {
       mainFontFamily: string;
