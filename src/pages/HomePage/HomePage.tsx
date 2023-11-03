@@ -9,7 +9,12 @@ const HomePage = (): React.ReactElement => {
   const { loadCharacters } = useContext(CharactersContext);
   useEffect(() => {
     (async () => {
-      loadCharacters(await loadCharactersApi());
+      const characterss = (await loadCharactersApi()).map((character) => ({
+        ...character,
+        appears: [...character.appears],
+      }));
+
+      loadCharacters(characterss);
     })();
   }, [loadCharacters, loadCharactersApi]);
 
