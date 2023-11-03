@@ -6,29 +6,26 @@ import UiContextWrapper from "../features/Ui/store/UiContextWrapper";
 
 describe("Given a getResponseCheck custom hook", () => {
   describe("When it fetches the url https://smash-characters-api.onrender.com/characters", () => {
-    test(
-      "Then it should return an array of Characters",
-      async () => {
-        const apiCharacters = mockCharacters;
+    test("Then it should return an array of Characters", async () => {
+      const apiCharacters = mockCharacters;
 
-        const expectedCharacters = apiCharacters.map((characterApi) =>
-          characterApiToCharacter(characterApi),
-        );
-        const {
-          result: {
-            current: { loadCharactersApi },
-          },
-        } = renderHook(() => useCharactersApi(), {
-          wrapper: ({ children }) => (
-            <UiContextWrapper>{children}</UiContextWrapper>
-          ),
-        });
+      const expectedCharacters = apiCharacters.map((characterApi) =>
+        characterApiToCharacter(characterApi),
+      );
 
-        const currentCharacters = await loadCharactersApi();
+      const {
+        result: {
+          current: { loadCharactersApi },
+        },
+      } = renderHook(() => useCharactersApi(), {
+        wrapper: ({ children }) => (
+          <UiContextWrapper>{children}</UiContextWrapper>
+        ),
+      });
 
-        expect(currentCharacters).toStrictEqual(expectedCharacters);
-      },
-      {},
-    );
+      const currentCharacters = await loadCharactersApi();
+
+      expect(currentCharacters).toStrictEqual(expectedCharacters);
+    });
   });
 });
