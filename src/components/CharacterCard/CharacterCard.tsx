@@ -15,8 +15,8 @@ const CharacterCard = ({
         className="character-card__image"
         src={imageUrl}
         alt={`${name}`}
-        width="110"
-        height="110"
+        width="165"
+        height="165"
       />
       <div className="character-card__property">
         <h3>{name}</h3>
@@ -28,8 +28,8 @@ const CharacterCard = ({
           <img
             src={"images/button-info.webp"}
             alt="Go to character details"
-            width="48"
-            height="48"
+            width="72"
+            height="72"
             className="character-card__icon-container__image"
           />
         </NavLink>
@@ -37,8 +37,8 @@ const CharacterCard = ({
           <img
             src={"images/button-trash.webp"}
             alt="Eliminate character"
-            width="48"
-            height="48"
+            width="72"
+            height="72"
             className="character-card__icon-container__image"
           />
         </button>
@@ -46,8 +46,8 @@ const CharacterCard = ({
           <img
             src={"images/button-edit.webp"}
             alt="Go to edit character"
-            width="48"
-            height="48"
+            width="72"
+            height="72"
             className="character-card__icon-container__image"
           />
         </NavLink>

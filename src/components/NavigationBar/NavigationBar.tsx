@@ -19,8 +19,8 @@ const NavigationBar = (): React.ReactElement => {
               }
               src="images/button-home.webp"
               alt="Home button"
-              width={48}
-              height={48}
+              width={72}
+              height={72}
             />
           </NavLink>
         </li>
@@ -34,8 +34,8 @@ const NavigationBar = (): React.ReactElement => {
               }
               src="images/button-plus.webp"
               alt="Add character button"
-              width={48}
-              height={48}
+              width={72}
+              height={72}
             />
           </NavLink>
         </li>
