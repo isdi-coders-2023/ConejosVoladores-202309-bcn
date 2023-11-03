@@ -8,26 +8,34 @@ const NavigationBar = (): React.ReactElement => {
 
   return (
     <NavigationBarStyled>
-      <ul className="footer">
+      <ul className="navigation">
         <li>
           <NavLink to="/home">
             <img
-              className="footer__icon"
-              src={`images/${
-                pathname === "/home" ? "button-home--active" : "button-home"
-              }.svg`}
+              className={
+                pathname === "/home"
+                  ? "navigation__icon--active"
+                  : "navigation__icon"
+              }
+              src="images/button-home.webp"
               alt="Home button"
+              width={48}
+              height={48}
             />
           </NavLink>
         </li>
         <li>
-          <NavLink to="/add" end>
+          <NavLink to="/">
             <img
-              className="footer__icon"
-              src={`images/${
-                pathname === "/add" ? "button-add--active" : "button-add"
-              }.svg`}
-              alt="Add button"
+              className={
+                pathname === "/addCharacter"
+                  ? "navigation__icon--active"
+                  : "navigation__icon"
+              }
+              src="images/button-plus.webp"
+              alt="Add character button"
+              width={48}
+              height={48}
             />
           </NavLink>
         </li>
