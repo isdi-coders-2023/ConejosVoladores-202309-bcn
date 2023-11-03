@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
+import CharactersWrapper from "../../features/characters/store/CharactersWrapper";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import { BrowserRouter } from "react-router-dom";
@@ -22,13 +22,13 @@ describe("Given the CharacterCardComponent", () => {
       };
 
       render(
-        <CharacarterWrapper>
+        <CharactersWrapper>
           <ThemeProvider theme={mainTheme}>
             <BrowserRouter>
               <CharacterCard character={marioInformation} />
             </BrowserRouter>
           </ThemeProvider>
-        </CharacarterWrapper>,
+        </CharactersWrapper>,
       );
 
       const name = screen.getByRole("heading") as HTMLHeadingElement;

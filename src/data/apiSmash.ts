@@ -3,9 +3,7 @@ import {
   CharacterStructureApi,
 } from "../features/characters/types";
 
-const apiUrl = import.meta.env.VITE_API_URL;
-
-export const characterStructureApiToCharacterStructure = ({
+export const characterApiToCharacter = ({
   id,
   name,
   availability,
@@ -26,10 +24,4 @@ export const characterStructureApiToCharacterStructure = ({
   };
 
   return characterStructure;
-};
-
-export const getCharacters = async (): Promise<Response> => {
-  const response = await fetch(`${apiUrl}/characters`);
-
-  return response;
 };
