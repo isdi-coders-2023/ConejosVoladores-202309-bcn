@@ -1,25 +1,24 @@
 import { useCallback, useContext } from "react";
-import {
-  characterStructureApiToCharacterStructure,
-  getCharacters,
-} from "../data/apiSmash";
+import { characterApiToCharacter } from "../data/apiSmash";
 import { CharacterStructureApi } from "../features/characters/types";
 import CharactersContext from "../features/characters/store/CharactersContext";
+
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export const useCharactersApi = () => {
   const { loadCharacters } = useContext(CharactersContext);
 
-  const loadCharactersApi = useCallback(async () => {
-    const response = await getCharacters();
+  const getCharacter = useCallback(async () => {
+    const response = await fetch(`${apiUrl}/characters`);
 
     const charactersApi = (await response.json()) as CharacterStructureApi[];
 
-    const characters = charactersApi.map((characterApi) =>
-      characterStructureApiToCharacterStructure(characterApi),
+    loadCharacters(
+      charactersApi.map((characterApi) =>
+        characterApiToCharacter(characterApi),
+      ),
     );
-
-    loadCharacters(characters);
   }, [loadCharacters]);
 
-  return { loadCharactersApi };
+  return { loadCharactersApi: getCharacter };
 };

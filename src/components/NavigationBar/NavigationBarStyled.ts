@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 const NavigationBarStyled = styled.nav`
+  position: sticky;
+  bottom: 0;
+  border-top: solid;
+
   .navigation {
     display: flex;
     justify-content: space-around;

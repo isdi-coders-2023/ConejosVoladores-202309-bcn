@@ -8,7 +8,7 @@ describe("Given a NavigationBar component", () => {
   describe("When is rendered", () => {
     test("Then it should show the image `button-home`", () => {
       const expectedAltText = "Home button";
-      const expectedImageSrc = "images/button-home.webp";
+      const expectedImageSrc = "images/button-home.svg";
 
       render(
         <BrowserRouter>
@@ -24,7 +24,7 @@ describe("Given a NavigationBar component", () => {
 
     test("Then it should show the image `button-plus`", () => {
       const expectedAltText = "Add character button";
-      const expectedImageSrc = "images/button-plus.webp";
+      const expectedImageSrc = "images/button-plus.svg";
 
       render(
         <BrowserRouter>
@@ -40,7 +40,7 @@ describe("Given a NavigationBar component", () => {
   });
 
   describe("When is rendered and we are at `/home`", () => {
-    test("Then it should show the image `button-plus.webp` with the className `navigation__icon--active`", () => {
+    test("Then it should show the image `button-plus.svg` with the className `navigation__icon--active`", () => {
       const expectedAltText = "Home button";
       const expectedImageClassName = "navigation__icon--active";
 
@@ -58,7 +58,7 @@ describe("Given a NavigationBar component", () => {
   });
 
   describe("When is rendered and we are at `/addCharacter`", () => {
-    test("Then it should show the image `button-plus.webp` with the className `navigation__icon`", () => {
+    test("Then it should show the image `button-plus.svg` with the className `navigation__icon`", () => {
       const expectedAltText = "Home button";
       const expectedImageClassName = "navigation__icon";
 
