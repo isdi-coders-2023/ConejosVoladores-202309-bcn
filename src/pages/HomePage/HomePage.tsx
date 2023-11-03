@@ -3,6 +3,7 @@ import { useContext, useEffect } from "react";
 import CharacterList from "../../components/CharacterList/CharacterList";
 import { useCharactersApi } from "../../hooks/useCharactersApi";
 import CharactersContext from "../../features/characters/store/CharactersContext";
+
 const HomePage = (): React.ReactElement => {
   const { loadCharactersApi } = useCharactersApi();
   const { loadCharacters } = useContext(CharactersContext);
