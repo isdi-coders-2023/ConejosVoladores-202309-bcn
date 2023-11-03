@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MainStyled = styled.main`
+const AppStyled = styled.main`
   display: flex;
   flex-direction: column;
   padding: 14px 22px 25px 22px;
@@ -8,4 +8,4 @@ const MainStyled = styled.main`
   height: 100%;
 `;
 
-export default MainStyled;
+export default AppStyled;
