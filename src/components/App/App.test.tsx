@@ -7,21 +7,22 @@ import CharacarterWrapper from "../../features/characters/store/CharactersWrappe
 
 describe("Given component App", () => {
   describe("When it is render", () => {
-    test("It should have a HTMLElement main", async () => {
+    test("Then it should have go to HomePage", async () => {
       render(
         <CharacarterWrapper>
           <ThemeProvider theme={mainTheme}>
-            <MemoryRouter initialEntries={[{ pathname: "/" }]}>
+            <MemoryRouter initialEntries={["/"]}>
               <App />
             </MemoryRouter>
           </ThemeProvider>
         </CharacarterWrapper>,
       );
-      const homePageElement = screen.getByRole("heading", {
+
+      const headingElment = screen.getByRole("heading", {
         name: "Characters",
       });
 
-      expect(homePageElement).toBeInTheDocument();
+      expect(headingElment).toBeInTheDocument();
     });
   });
 });
