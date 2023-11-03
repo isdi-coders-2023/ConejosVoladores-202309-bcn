@@ -8,12 +8,12 @@ const App = (): React.ReactElement => {
   return (
     <AppStyled>
       <Header />
-      <div className="main-container">
+      <main className="main-container">
         <Routes>
           <Route path="/home" element={<HomePage />} />
           <Route path="/" element={<Navigate to="/home" />} />
         </Routes>
-      </div>
+      </main>
       <NavigationBar />
     </AppStyled>
   );
