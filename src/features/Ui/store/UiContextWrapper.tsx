@@ -6,13 +6,13 @@ const UiContextWrapper = ({
 }: PropsWithChildren): React.ReactElement => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const loadLoading = useCallback((isLoading: boolean) => {
+  const setLoadingStatus = useCallback((isLoading: boolean) => {
     setIsLoading(isLoading);
   }, []);
 
   const uiValue = useMemo(
-    () => ({ isLoading, loadLoading }),
-    [loadLoading, isLoading],
+    () => ({ isLoading, setLoadingStatus }),
+    [setLoadingStatus, isLoading],
   );
 
   return <UiContext.Provider value={uiValue}>{children}</UiContext.Provider>;

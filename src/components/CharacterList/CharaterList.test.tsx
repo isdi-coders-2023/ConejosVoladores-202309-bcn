@@ -1,10 +1,13 @@
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
-import CharacterList from "./CharacterList";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import CharactersWrapper from "../../features/characters/store/CharactersWrapper";
 import { MemoryRouter } from "react-router-dom";
-import HomePage from "../../pages/HomePage/HomePage";
+import UiContextWrapper from "../../features/Ui/store/UiContextWrapper";
+import CharacterList from "./CharacterList";
+import CharactersContext from "../../features/characters/store/CharactersContext";
+import mockCharacters from "../../mocks/mockData";
+import { characterApiToCharacter } from "../../data/apiSmash";
 
 describe("Given the component CharacterList", () => {
   describe("When CharacterList is initialize", () => {
@@ -13,11 +16,13 @@ describe("Given the component CharacterList", () => {
       const liTagName = "listitem";
 
       render(
-        <CharactersWrapper>
-          <ThemeProvider theme={mainTheme}>
-            <CharacterList />
-          </ThemeProvider>
-        </CharactersWrapper>,
+        <UiContextWrapper>
+          <CharactersWrapper>
+            <ThemeProvider theme={mainTheme}>
+              <CharacterList />
+            </ThemeProvider>
+          </CharactersWrapper>
+        </UiContextWrapper>,
       );
 
       const elementList = screen.queryByRole(ulTagName);
@@ -29,28 +34,31 @@ describe("Given the component CharacterList", () => {
   });
 
   describe("When we recive data of characters", () => {
-    test("Then it should return Mario and Donkey Kong", async () => {
+    test("Then it should return Mario and Donkey Kong", () => {
       const mario = "Mario";
       const donkeyKong = "Donkey Kong";
-      await waitFor(() =>
-        render(
-          <CharactersWrapper>
-            <ThemeProvider theme={mainTheme}>
-              <MemoryRouter initialEntries={["/"]}>
-                <HomePage />
-              </MemoryRouter>
-            </ThemeProvider>
-          </CharactersWrapper>,
-        ),
+      const loadCharacters = () => {};
+      const characters = mockCharacters.map((characterApi) =>
+        characterApiToCharacter(characterApi),
+      );
+
+      render(
+        <ThemeProvider theme={mainTheme}>
+          <MemoryRouter initialEntries={["/"]}>
+            <CharactersContext.Provider value={{ characters, loadCharacters }}>
+              <CharacterList />
+            </CharactersContext.Provider>
+          </MemoryRouter>
+        </ThemeProvider>,
       );
 
       const marioElement = screen.getByRole("heading", {
         name: mario,
       });
-
       const donkeyKongElement = screen.getByRole("heading", {
         name: donkeyKong,
       });
+
       expect(marioElement).toBeInTheDocument();
       expect(donkeyKongElement).toBeInTheDocument();
     });

@@ -1,15 +1,21 @@
 import HomePageStyled from "./HomePageStyled";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import CharacterList from "../../components/CharacterList/CharacterList";
 import { useCharactersApi } from "../../hooks/useCharactersApi";
-
+import CharactersContext from "../../features/characters/store/CharactersContext";
 const HomePage = (): React.ReactElement => {
   const { loadCharactersApi } = useCharactersApi();
+  const { loadCharacters } = useContext(CharactersContext);
   useEffect(() => {
     (async () => {
-      await loadCharactersApi();
+      const characterss = (await loadCharactersApi()).map((character) => ({
+        ...character,
+        appears: [...character.appears],
+      }));
+
+      loadCharacters(characterss);
     })();
-  }, [loadCharactersApi]);
+  }, [loadCharacters, loadCharactersApi]);
 
   return (
     <HomePageStyled>
