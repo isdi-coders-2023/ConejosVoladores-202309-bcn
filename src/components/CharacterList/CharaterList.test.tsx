@@ -31,6 +31,7 @@ describe("Given the component CharacterList", () => {
   describe("When we recive data of characters", () => {
     test("it expect to have characters cards", () => {
       const expectedNames = ["Characters", "Link", "Yoshi"];
+
       render(
         <CharacarterWrapper>
           <ThemeProvider theme={mainTheme}>
@@ -45,7 +46,7 @@ describe("Given the component CharacterList", () => {
       const headingElements = getAllByRole(mainElement, "heading");
 
       headingElements.forEach((element, position) => {
-        expect(element.textContent).toBe(expectedNames[position]);
+        expect(expectedNames[position]).toBe(element.textContent);
       });
     });
   });
