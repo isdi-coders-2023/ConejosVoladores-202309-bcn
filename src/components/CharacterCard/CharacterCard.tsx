@@ -26,7 +26,7 @@ const CharacterCard = ({
       <div className="character-card__icon-container">
         <NavLink to={`/`}>
           <img
-            src={"images/button-info.webp"}
+            src={"images/button-info.svg"}
             alt="Go to character details"
             width="48"
             height="48"
@@ -35,7 +35,7 @@ const CharacterCard = ({
         </NavLink>
         <button>
           <img
-            src={"images/button-trash.webp"}
+            src={"images/button-trash.svg"}
             alt="Eliminate character"
             width="48"
             height="48"
@@ -44,7 +44,7 @@ const CharacterCard = ({
         </button>
         <NavLink to={`/`} end>
           <img
-            src={"images/button-edit.webp"}
+            src={"images/button-edit.svg"}
             alt="Go to edit character"
             width="48"
             height="48"

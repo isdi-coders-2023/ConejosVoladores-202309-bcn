@@ -17,7 +17,7 @@ const NavigationBar = (): React.ReactElement => {
                   ? "navigation__icon--active"
                   : "navigation__icon"
               }
-              src="images/button-home.webp"
+              src="images/button-home.svg"
               alt="Home button"
               width={48}
               height={48}
@@ -32,7 +32,7 @@ const NavigationBar = (): React.ReactElement => {
                   ? "navigation__icon--active"
                   : "navigation__icon"
               }
-              src="images/button-plus.webp"
+              src="images/button-plus.svg"
               alt="Add character button"
               width={48}
               height={48}
