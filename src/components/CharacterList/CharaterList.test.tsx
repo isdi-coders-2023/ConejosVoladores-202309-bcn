@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import CharacterList from "./CharacterList";
 import { render, screen, waitFor } from "@testing-library/react";
-import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
+import CharactersWrapper from "../../features/characters/store/CharactersWrapper";
 import { MemoryRouter } from "react-router-dom";
 import HomePage from "../../pages/HomePage/HomePage";
 
@@ -13,11 +13,11 @@ describe("Given the component CharacterList", () => {
       const liTagName = "listitem";
 
       render(
-        <CharacarterWrapper>
+        <CharactersWrapper>
           <ThemeProvider theme={mainTheme}>
             <CharacterList />
           </ThemeProvider>
-        </CharacarterWrapper>,
+        </CharactersWrapper>,
       );
 
       const elementList = screen.queryByRole(ulTagName);
@@ -29,18 +29,18 @@ describe("Given the component CharacterList", () => {
   });
 
   describe("When we recive data of characters", () => {
-    test("it expect to have characters cards", async () => {
+    test("Then it should return Mario and Donkey Kong", async () => {
       const mario = "Mario";
       const donkeyKong = "Donkey Kong";
       await waitFor(() =>
         render(
-          <CharacarterWrapper>
+          <CharactersWrapper>
             <ThemeProvider theme={mainTheme}>
               <MemoryRouter initialEntries={["/"]}>
                 <HomePage />
               </MemoryRouter>
             </ThemeProvider>
-          </CharacarterWrapper>,
+          </CharactersWrapper>,
         ),
       );
 

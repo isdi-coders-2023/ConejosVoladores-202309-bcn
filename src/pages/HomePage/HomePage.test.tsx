@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import HomePage from "./HomePage";
 import { screen, render } from "@testing-library/react";
 import mainTheme from "../../styles/mainTheme";
-import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
+import CharactersWrapper from "../../features/characters/store/CharactersWrapper";
 import { BrowserRouter } from "react-router-dom";
 
 describe("Given a HomePage component", () => {
@@ -11,13 +11,13 @@ describe("Given a HomePage component", () => {
       const expectedText = "Characters";
 
       render(
-        <CharacarterWrapper>
+        <CharactersWrapper>
           <BrowserRouter>
             <ThemeProvider theme={mainTheme}>
               <HomePage />
             </ThemeProvider>
           </BrowserRouter>
-        </CharacarterWrapper>,
+        </CharactersWrapper>,
       );
 
       const text = screen.getByRole("heading", { name: expectedText });

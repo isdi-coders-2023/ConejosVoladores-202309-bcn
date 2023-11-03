@@ -3,19 +3,19 @@ import mainTheme from "../../styles/mainTheme";
 import { ThemeProvider } from "styled-components";
 import { MemoryRouter } from "react-router-dom";
 import App from "./App";
-import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
+import CharactersWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given component App", () => {
   describe("When it is render", () => {
-    test("Then it should have go to HomePage", async () => {
+    test("Then it should go to HomePage", async () => {
       render(
-        <CharacarterWrapper>
+        <CharactersWrapper>
           <ThemeProvider theme={mainTheme}>
             <MemoryRouter initialEntries={["/"]}>
               <App />
             </MemoryRouter>
           </ThemeProvider>
-        </CharacarterWrapper>,
+        </CharactersWrapper>,
       );
 
       const headingElment = screen.getByRole("heading", {
