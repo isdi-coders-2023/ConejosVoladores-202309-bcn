@@ -5,16 +5,15 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 
 describe("Given a Header Component", () => {
-  beforeEach(() => {
-    render(
-      <ThemeProvider theme={mainTheme}>
-        <Header />
-      </ThemeProvider>,
-    );
-  });
   describe("When it receives an image with alt property Super Smash Bross logo", () => {
-    test("Then it should show an image with the same alt property", () => {
+    test("Then it should show an image with alt property Super Smash Bross logo", () => {
       const expectedText = "Super Smash Bross logo";
+
+      render(
+        <ThemeProvider theme={mainTheme}>
+          <Header />
+        </ThemeProvider>,
+      );
 
       const header = screen.getByAltText(expectedText);
 
