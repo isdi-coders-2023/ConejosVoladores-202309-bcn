@@ -8,7 +8,23 @@ describe("Given a NavigationBar component", () => {
   describe("When is rendered", () => {
     test("Then it should show the image `button-home`", () => {
       const expectedAltText = "Home button";
-      const expectedImageSrc = "images/button-home.svg";
+      const expectedImageSrc = "images/button-home.webp";
+
+      render(
+        <BrowserRouter>
+          <ThemeProvider theme={mainTheme}>
+            <NavigationBar />
+          </ThemeProvider>
+        </BrowserRouter>,
+      );
+
+      const homeIcon = screen.getByAltText(expectedAltText);
+      expect(homeIcon).toHaveAttribute("src", expectedImageSrc);
+    });
+
+    test("Then it should show the image `button-plus`", () => {
+      const expectedAltText = "Add character button";
+      const expectedImageSrc = "images/button-plus.webp";
 
       render(
         <BrowserRouter>
@@ -22,10 +38,11 @@ describe("Given a NavigationBar component", () => {
       expect(homeIcon).toHaveAttribute("src", expectedImageSrc);
     });
   });
+
   describe("When is rendered and we are at `/home`", () => {
-    test("Then it should show the image `button-home--active`", () => {
+    test("Then it should show the image `button-plus.webp` with the className `navigation__icon--active`", () => {
       const expectedAltText = "Home button";
-      const expectedImageSrc = "images/button-home--active.svg";
+      const expectedImageClassName = "navigation__icon--active";
 
       render(
         <MemoryRouter initialEntries={[{ pathname: "/home" }]}>
@@ -35,42 +52,26 @@ describe("Given a NavigationBar component", () => {
         </MemoryRouter>,
       );
 
-      const homeIcon = screen.getByAltText(expectedAltText);
-      expect(homeIcon).toHaveAttribute("src", expectedImageSrc);
+      const homeImage = screen.getByAltText(expectedAltText);
+      expect(homeImage).toHaveClass(expectedImageClassName);
     });
   });
-  describe("When is rendered", () => {
-    test("Then it should show the image `button-add`", () => {
-      const expectedAltText = "Add button";
-      const expectedImageSrc = "images/button-add.svg";
+
+  describe("When is rendered and we are at `/addCharacter`", () => {
+    test("Then it should show the image `button-plus.webp` with the className `navigation__icon`", () => {
+      const expectedAltText = "Home button";
+      const expectedImageClassName = "navigation__icon";
 
       render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <NavigationBar />
-          </ThemeProvider>
-        </BrowserRouter>,
-      );
-
-      const homeIcon = screen.getByAltText(expectedAltText);
-      expect(homeIcon).toHaveAttribute("src", expectedImageSrc);
-    });
-  });
-  describe("When is rendered and we are at `/add`", () => {
-    test("Then it should show the image `button-add--active`", () => {
-      const expectedAltText = "Add button";
-      const expectedImageSrc = "images/button-add--active.svg";
-
-      render(
-        <MemoryRouter initialEntries={[{ pathname: "/add" }]}>
+        <MemoryRouter initialEntries={[{ pathname: "/addCharacter" }]}>
           <ThemeProvider theme={mainTheme}>
             <NavigationBar />
           </ThemeProvider>
         </MemoryRouter>,
       );
 
-      const homeIcon = screen.getByAltText(expectedAltText);
-      expect(homeIcon).toHaveAttribute("src", expectedImageSrc);
+      const homeImage = screen.getByAltText(expectedAltText);
+      expect(homeImage).toHaveClass(expectedImageClassName);
     });
   });
 });

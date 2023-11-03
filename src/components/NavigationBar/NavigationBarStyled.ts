@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const NavigationBarStyled = styled.nav`
-  .footer {
+  .navigation {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -11,15 +11,14 @@ const NavigationBarStyled = styled.nav`
     background-color: ${({ theme }) => theme.color.containerBackground};
   }
 
-  .footer__icon {
+  .navigation__icon {
     height: 48px;
-  }
+    width: 48px;
 
-  .active {
-    img {
-      border: 3px solid black;
+    &--active {
+      filter: invert(100%);
+      border: 3px solid ${({ theme }) => theme.color.secondaryFont};
       border-radius: 100%;
-      height: 48px;
     }
   }
 `;
