@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { CharactersContextStructure } from "./CharactersContextStructure";
+import { CharactersContextStructure } from "../types";
 
 const CharactersContext = createContext<CharactersContextStructure>(
   {} as CharactersContextStructure,

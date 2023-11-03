@@ -27,3 +27,8 @@ export interface CharacterStructure {
   smashtype: string;
   imageUrl: string;
 }
+
+export interface CharactersContextStructure {
+  characters: CharacterStructure[];
+  loadCharacters: (characters: CharacterStructure[]) => void;
+}
