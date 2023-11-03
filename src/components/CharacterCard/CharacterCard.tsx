@@ -19,7 +19,7 @@ const CharacterCard = ({
         height="110"
       />
       <div className="character-card__property">
-        <h3>{name}</h3>
+        <h2>{name}</h2>
         <span>{availability}</span>
         <span>{attack}</span>
       </div>
