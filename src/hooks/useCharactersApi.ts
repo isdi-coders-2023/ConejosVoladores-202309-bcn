@@ -17,6 +17,7 @@ export const useCharactersApi = () => {
     const characters = charactersApi.map((characterApi) =>
       characterStructureApiToCharacterStructure(characterApi),
     );
+
     loadCharacters(characters);
   }, [loadCharacters]);
 
