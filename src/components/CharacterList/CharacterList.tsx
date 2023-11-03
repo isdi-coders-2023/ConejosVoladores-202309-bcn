@@ -5,6 +5,7 @@ import CharacterCard from "../CharacterCard/CharacterCard";
 
 const CharacterList = (): React.ReactElement => {
   const { characters } = useContext(CharactersContext);
+
   return (
     <CharacterListStyled>
       {characters.map((character) => (
