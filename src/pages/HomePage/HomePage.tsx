@@ -1,21 +1,15 @@
 import HomePageStyled from "./HomePageStyled";
-import { useContext, useEffect } from "react";
-import apiCharacters from "../../data/apiData";
-import { CharacterStructure } from "../../features/characters/types";
-import CharactersContext from "../../features/characters/store/CharactersContext";
+import { useEffect } from "react";
 import CharacterList from "../../components/CharacterList/CharacterList";
-import { characterStructureApiToCharacterStructure } from "../../data/apiSmash";
+import { useCharactersApi } from "../../hooks/useCharactersApi";
 
 const HomePage = (): React.ReactElement => {
-  const { loadCharacters } = useContext(CharactersContext);
+  const { loadCharactersApi } = useCharactersApi();
   useEffect(() => {
-    const structuredMockCharacters = apiCharacters.map(
-      (character): CharacterStructure =>
-        characterStructureApiToCharacterStructure(character),
-    );
-
-    loadCharacters(structuredMockCharacters);
-  }, [loadCharacters]);
+    (async () => {
+      await loadCharactersApi();
+    })();
+  }, [loadCharactersApi]);
 
   return (
     <HomePageStyled>

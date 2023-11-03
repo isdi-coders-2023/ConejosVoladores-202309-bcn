@@ -35,15 +35,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.color.mainBackground};
     font-size: ${({ theme }) => theme.typography.propertiesSize};
   }
-
-  .main-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
 `;
 
 export default GlobalStyle;
