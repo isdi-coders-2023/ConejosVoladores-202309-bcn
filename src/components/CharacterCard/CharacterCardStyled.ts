@@ -38,7 +38,8 @@ const CharacterCardStyled = styled.section`
 
         &:active {
           filter: invert(100%);
-          border: 1px solid ${({ theme }) => theme.color.secondaryFont};
+          border: 3px solid ${({ theme }) => theme.color.secondaryFont};
+          border-radius: 100%;
         }
       }
     }
