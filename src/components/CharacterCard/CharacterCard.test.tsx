@@ -33,7 +33,7 @@ describe("Given the CharacterCardComponent", () => {
 
       const name = screen.getByRole("heading") as HTMLHeadingElement;
       const img = screen.getByRole("img", {
-        name: "imagen de Mario",
+        name: "Mario",
       }) as HTMLImageElement;
 
       expect(img.src).toBe(marioInformation.imageUrl);

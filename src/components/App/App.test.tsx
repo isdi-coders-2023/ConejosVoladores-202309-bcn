@@ -1,25 +1,27 @@
 import { render, screen } from "@testing-library/react";
 import mainTheme from "../../styles/mainTheme";
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import App from "./App";
 import CharacarterWrapper from "../../features/characters/store/CharactersWrapper";
 
 describe("Given component App", () => {
   describe("When it is render", () => {
-    test("It should have a HTMLElement main", () => {
+    test("It should have a HTMLElement main", async () => {
       render(
         <CharacarterWrapper>
           <ThemeProvider theme={mainTheme}>
-            <BrowserRouter>
+            <MemoryRouter initialEntries={[{ pathname: "/" }]}>
               <App />
-            </BrowserRouter>
+            </MemoryRouter>
           </ThemeProvider>
         </CharacarterWrapper>,
       );
-      const elementMain = screen.getByRole("main");
+      const homePageElement = screen.getByRole("heading", {
+        name: "Characters",
+      });
 
-      expect(elementMain).toBeInTheDocument();
+      expect(homePageElement).toBeInTheDocument();
     });
   });
 });
