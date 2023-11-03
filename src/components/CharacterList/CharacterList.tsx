@@ -16,4 +16,5 @@ const CharacterList = (): React.ReactElement => {
     </CharacterListStyled>
   );
 };
+
 export default CharacterList;
