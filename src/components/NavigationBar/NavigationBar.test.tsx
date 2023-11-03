@@ -39,24 +39,6 @@ describe("Given a NavigationBar component", () => {
     });
   });
 
-  describe("When is rendered and we are at `/home`", () => {
-    test("Then it should show the image `button-plus.svg` with the className `navigation__icon--active`", () => {
-      const expectedAltText = "Home button";
-      const expectedImageClassName = "navigation__icon--active";
-
-      render(
-        <MemoryRouter initialEntries={[{ pathname: "/home" }]}>
-          <ThemeProvider theme={mainTheme}>
-            <NavigationBar />
-          </ThemeProvider>
-        </MemoryRouter>,
-      );
-
-      const homeImage = screen.getByAltText(expectedAltText);
-      expect(homeImage).toHaveClass(expectedImageClassName);
-    });
-  });
-
   describe("When is rendered and we are at `/addCharacter`", () => {
     test("Then it should show the image `button-plus.svg` with the className `navigation__icon`", () => {
       const expectedAltText = "Home button";

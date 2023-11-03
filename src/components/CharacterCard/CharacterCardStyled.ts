@@ -27,22 +27,26 @@ const CharacterCardStyled = styled.section`
         padding: 5px 0;
       }
     }
+  }
 
-    &__icon-container {
-      display: flex;
-      gap: 37px;
-      justify-content: center;
+  .icon-container {
+    display: flex;
+    gap: 37px;
+    justify-content: center;
 
-      &__image {
-        border-radius: 40px;
-
-        &:active {
-          filter: invert(100%);
-          border: 3px solid ${({ theme }) => theme.color.secondaryFont};
-          border-radius: 100%;
-        }
-      }
+    &__image {
+      height: 48px;
+      width: 48px;
+      border-radius: 100%;
+      border: 3px solid ${({ theme }) => theme.color.secondaryFont};
     }
+  }
+
+  .active {
+    filter: invert(100%);
+    border-radius: 100%;
+    border: 3px solid ${({ theme }) => theme.color.secondaryFont};
+    background-color: ${({ theme }) => theme.color.secondaryFont};
   }
 `;
 

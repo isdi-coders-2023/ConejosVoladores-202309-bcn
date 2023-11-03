@@ -23,32 +23,32 @@ const CharacterCard = ({
         <span>{availability}</span>
         <span>{attack}</span>
       </div>
-      <div className="character-card__icon-container">
-        <NavLink to={`/`}>
+      <div className="icon-container">
+        <NavLink aria-label="info" to={`/`}>
           <img
             src={"images/button-info.svg"}
             alt="Go to character details"
             width="48"
             height="48"
-            className="character-card__icon-container__image"
+            className="icon-container__image"
           />
         </NavLink>
-        <button>
+        <NavLink aria-label="trash" to={`/`}>
           <img
             src={"images/button-trash.svg"}
             alt="Eliminate character"
             width="48"
             height="48"
-            className="character-card__icon-container__image"
+            className="icon-container__image"
           />
-        </button>
-        <NavLink to={`/`} end>
+        </NavLink>
+        <NavLink aria-label="edit" to={`/`}>
           <img
             src={"images/button-edit.svg"}
             alt="Go to edit character"
             width="48"
             height="48"
-            className="character-card__icon-container__image"
+            className="icon-container__image"
           />
         </NavLink>
       </div>
