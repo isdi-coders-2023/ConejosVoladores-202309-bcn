@@ -10,7 +10,7 @@ const AppStyled = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 14px 22px 25px 22px;
+    padding: 14px 22px 75px 22px;
     align-items: center;
   }
 `;
