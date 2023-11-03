@@ -7,7 +7,7 @@ import mainTheme from "./styles/mainTheme";
 import CharacarterWrapper from "./features/characters/store/CharactersWrapper";
 import GlobalStyle from "./styles/GlobalStyle";
 import "@fontsource-variable/changa";
-import UiContextWrapped from "./features/characters/Ui/store/UiContextWrapped";
+import UiContextWrapped from "./features/Ui/store/UiContextWrapped";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
