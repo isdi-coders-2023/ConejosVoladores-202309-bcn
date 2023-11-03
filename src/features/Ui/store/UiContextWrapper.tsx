@@ -4,7 +4,7 @@ import { PropsWithChildren, useState } from "react";
 const UiContextWrapped = ({
   children,
 }: PropsWithChildren): React.ReactElement => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   return (
     <UiContext.Provider value={{ isLoading, setIsLoading }}>

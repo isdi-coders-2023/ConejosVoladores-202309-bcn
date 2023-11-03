@@ -3,6 +3,7 @@ import Loading from "./Loading";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import { BrowserRouter } from "react-router-dom";
+import UiContextWrapped from "../../features/Ui/store/UiContextWrapper";
 
 describe("Given a Loading component", () => {
   describe("When is render", () => {
@@ -12,9 +13,11 @@ describe("Given a Loading component", () => {
 
       render(
         <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <Loading />
-          </ThemeProvider>{" "}
+          <UiContextWrapped>
+            <ThemeProvider theme={mainTheme}>
+              <Loading />
+            </ThemeProvider>{" "}
+          </UiContextWrapped>
         </BrowserRouter>,
       );
 
