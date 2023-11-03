@@ -7,16 +7,19 @@ import mainTheme from "./styles/mainTheme";
 import CharactersWrapper from "./features/characters/store/CharactersWrapper";
 import GlobalStyle from "./styles/GlobalStyle";
 import "@fontsource-variable/changa";
+import UiContextWrapper from "./features/Ui/store/UiContextWrapper";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <CharactersWrapper>
-      <ThemeProvider theme={mainTheme}>
-        <BrowserRouter>
-          <GlobalStyle />
-          <App />
-        </BrowserRouter>
-      </ThemeProvider>
-    </CharactersWrapper>
+    <UiContextWrapper>
+      <CharactersWrapper>
+        <ThemeProvider theme={mainTheme}>
+          <BrowserRouter>
+            <GlobalStyle />
+            <App />
+          </BrowserRouter>
+        </ThemeProvider>
+      </CharactersWrapper>
+    </UiContextWrapper>
   </React.StrictMode>,
 );
